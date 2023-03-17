@@ -150,6 +150,12 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
     halloffame is used to implement an elitism mechanism. The individuals contained in the
     halloffame are directly injected into the next generation and are not subject to the
     genetic operators of selection, crossover and mutation.
+    Although, we add some new features:
+    -> Create Gen files saving the Individual generated from start.
+    -> Add some checkpoint for restart the evolution from a previos state.
+    -> Add a Command log updating function(this is a third party code part, credits for she/he), for tracking run status.
+    -> Save logbook from start, before was saved at end.
+    -> Add some memory status and fitness tracking for files.
     """
     File2HoF=str(dir+'HOFPoP.txt')
     counter=0
