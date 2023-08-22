@@ -1,0 +1,12 @@
+0;Cosh(Sec(Cosh(Logn(Times(Coth(Tan(xd1)), Power(Vy2, Sec(Cosh(Logn(Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2))))))))))));4000000.0; Current memory: 65.7963MB; Peak: 69.8911MB;
+
+1;Cosh(Coth(qy2));6400000.0; Current memory: 68.6843MB; Peak: 71.6131MB;
+
+2;Cosh(Sec(Cosh(Logn(Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2)))))));4000000.0; Current memory: 70.0966MB; Peak: 73.5971MB;
+
+3;Cosh(Sec(Cosh(Logn(Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2)))))));4000000.0; Current memory: 71.4674MB; Peak: 75.1445MB;
+
+4;Cosh(Sec(Cosh(Power(Tan(V1), Power(Tan(V1), Logn(Logn(Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2))))))))));4000000.0; Current memory: 72.8384MB; Peak: 76.3957MB;
+
+5;Exp(Times(Minus(Divide(Plus(Atan2r(Plus(Tanh(tR), Sqrt(Sinh(Real(Sech(xdp2))))), Asin(Cos(t1))), Acos(Real(Cos(xd1)))), Plus(Sqr(Sec(Cosh(Power(Tan(xd1), Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2))))))), Cosh(Power(Tan(V1), Logn(Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2)))))))), Asin(Csch(Cosh(Csch(Times(Vy1, V2)))))), Abs(Asin(ydp2))));4000000.0; Current memory: 72.0996MB; Peak: 76.8177MB;
+

@@ -1,0 +1,16 @@
+0;Cosh(Sec(Cosh(Power(Tan(V1), Logn(Times(Coth(Tan(V1)), Power(Vy2, Coth(qy2))))))));4000000.0; Current memory: 53.0826MB; Peak: 56.7212MB;
+
+1;Cosh(Sec(Cosh(Power(Tan(xd1), Logn(Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2))))))));4000000.0; Current memory: 51.7737MB; Peak: 56.7212MB;
+
+2;Exp(Times(Minus(Divide(Plus(Atan2r(Plus(Tanh(tR), Sqrt(Sinh(Real(Sech(xdp2))))), Asin(Cos(t1))), Acos(Divide(Plus(Atan2r(Plus(Tanh(tR), Sqrt(Sinh(Real(Sech(xdp2))))), Asin(Cos(t1))), Acos(Real(Cos(xd1)))), Plus(Sqr(Abs(Atanr(xdp1))), Plus(Tanh(tR), Maximum(t1, Vy2)))))), Plus(Sqr(Abs(Atanr(xdp1))), Plus(Tanh(tR), Maximum(t1, Vy2)))), Asin(Csch(Cosh(Csch(Times(Vy1, V2)))))), Abs(Asin(ydp2))));4000000.0; Current memory: 52.9585MB; Peak: 56.7212MB;
+
+3;Exp(Times(Minus(Real(Cos(xd1)), Asin(Minus(Plus(Maximum(Sech(Sinh(Tan(Asin(Sin(Sqr(Tanh(Sech(Vy2)))))))), Sinh(Norm(Cos(Exp(Sqr(Sqrt(Power(Asin(tR), Power(t1, tR))))))))), Coth(Tanh(Minus(Minimum(Tan(Csc(Maximum(Atan2r(Sqrt(OrR1R1), Tan(V1)), Minimum(Atanr(td), Real(qy2))))), Sinh(Abs(Abs(Plus(Cos(V1), Minus(Vy2, td)))))), Tan(Sech(Sqrt(Minus(Sinh(Csc(Vy2)), Norm(Csc(td)))))))))), Sec(Sinh(Divide(Asin(Atan2r(Exp(Tanh(Sec(Sinh(Sech(xdp2))))), Sin(Cot(Acos(Sinh(Divide(xd1, qd2))))))), Real(Sec(Csch(Csc(Tan(Times(Norm(ydp1), Exp(V2))))))))))))), Abs(Asin(ydp2))));4000000.0; Current memory: 54.1917MB; Peak: 57.957MB;
+
+4;Cosh(Sec(Plus(Tanh(tR), Maximum(t1, Vy2))));5000000.0; Current memory: 55.5213MB; Peak: 58.4726MB;
+
+5;Exp(Times(Minus(Divide(Plus(Atan2r(Plus(Tanh(tR), Sqrt(Sinh(Real(Sech(xdp2))))), Asin(Cos(t1))), Acos(Real(Cos(xd1)))), Plus(Sqr(Abs(Atanr(xdp1))), Cosh(Power(Tan(V1), Logn(Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2)))))))), Asin(Csch(Cosh(Csch(Times(Vy1, V2)))))), Abs(Asin(ydp2))));4000000.0; Current memory: 56.8674MB; Peak: 60.5183MB;
+
+6;Cosh(Sec(Cosh(Logn(Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2)))))));4000000.0; Current memory: 58.2791MB; Peak: 61.7731MB;
+
+7;Cosh(Sec(Cosh(Power(Tan(V1), Power(Tan(V1), Logn(Times(Coth(Tan(xd1)), Power(Vy2, Coth(qy2)))))))));4000000.0; Current memory: 59.6886MB; Peak: 63.1787MB;
+

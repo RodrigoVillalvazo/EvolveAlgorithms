@@ -2,10 +2,19 @@ import numpy as np
 import math as mat
 import cmath as ctm
 import warnings
+from sympy import trigsimp
+from scipy import integrate
+from scipy import fft
 warnings.filterwarnings("ignore")
 np.seterr(all='warn')
 NaN=mat.nan
 Inf=mat.inf
+def Integrate(x,y):
+    return(integrate.fixed_quad(x,y,None))
+def FFT(y,z):
+    return(fft(y,z))
+def TrigSimp(y):
+    return(trigsimp(y))
 def Minus(x,y):
     '''
     x and y take any value. 
@@ -143,9 +152,9 @@ def Maximum(x,y):
     def MAXIMUM(a40,b40):
         res40=max(a40,b40)
         return res40
-    if(isinstance(y,list)):
+    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
         x=x*np.ones(len(y))
-    if(isinstance(x,list)):
+    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
         y=y*np.ones(len(x))
     try:
         res=map(MAXIMUM,x,y)
@@ -170,9 +179,9 @@ def Minimum(x,y):
     def MINIMUM(a41,b41):
         res41=min(a41,b41)
         return res41
-    if(isinstance(y,list)):
+    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
         x=x*np.ones(len(y))
-    if(isinstance(x,list)):
+    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
         y=y*np.ones(len(x))
     try:
         res=map(MINIMUM,x,y)
@@ -190,7 +199,9 @@ def Minimum(x,y):
 
 def Atan2r(x,y):
     '''
-    x and y take any value, then return a list or float
+    @param x
+
+    @param y
     '''
     fail=False
     def arcotangente2(a42,b42):
@@ -199,9 +210,9 @@ def Atan2r(x,y):
         except:
             res42=NaN
         return res42
-    if(isinstance(y,list)):
+    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
         x=x*np.ones(len(y))
-    if(isinstance(x,list)):
+    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
         y=y*np.ones(len(x))    
     try:
         res=map(arcotangente2,x,y)
@@ -217,7 +228,7 @@ def Atan2r(x,y):
 
 def Sqrt(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def raiz(a):
         res22=np.sqrt(a)
@@ -233,7 +244,7 @@ def Sqrt(z):
 
 def Sqr(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def exponente2(a):
         res21=pow(a,2)
@@ -249,7 +260,7 @@ def Sqr(z):
 
 def Logn(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def logaritmo(a):
         try:
@@ -268,7 +279,7 @@ def Logn(z):
 
 def Exp(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def exponencial(a):
         try:
@@ -287,7 +298,7 @@ def Exp(z):
 
 def Sinh(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def senohyperbolico(a):
         try:
@@ -306,7 +317,7 @@ def Sinh(z):
 
 def Cosh(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def cosenohyperbolico(z):
         try:
@@ -324,7 +335,7 @@ def Cosh(z):
     return res
 def Tanh(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def tangentehyperbolica(z):
         try:
@@ -342,7 +353,7 @@ def Tanh(z):
     return res
 def Csch(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def cosecantehyperbolica(z):
         try:
@@ -360,7 +371,7 @@ def Csch(z):
     return res
 def Sech(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def secantehyperbolica(z):
         try:
@@ -378,7 +389,7 @@ def Sech(z):
     return res
 def Coth(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''
     def cotangentehyperbolica(z):
         try:
@@ -397,7 +408,7 @@ def Coth(z):
   
 def Sign(z):
     '''
-    @param z takes any value, then return list or float
+    @param z
     '''  
     def signo(z):
         try:
@@ -414,7 +425,7 @@ def Sign(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Cos(z):
     def coseno(z):
@@ -432,7 +443,7 @@ def Cos(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Sin(z):
     def sinusoidal(z):
@@ -450,7 +461,7 @@ def Sin(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Tan(z):
     def tangente(z):
@@ -468,7 +479,7 @@ def Tan(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Csc(z):
     def cosecante(z):
@@ -486,7 +497,7 @@ def Csc(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Sec(z):
     def secante(z):
@@ -504,7 +515,7 @@ def Sec(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Cot(z):
     def cotangente(z):
@@ -522,7 +533,7 @@ def Cot(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Asin(z):
     def arcosin(z):
@@ -540,7 +551,7 @@ def Asin(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''    
 def Acos(z):
     def arcocoseno(z):
@@ -558,7 +569,7 @@ def Acos(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Abs(z):
     def absoluto(z):
@@ -573,7 +584,7 @@ def Abs(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Real(z):
     def real(z):
@@ -589,7 +600,7 @@ def Real(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Atanr(z):
     def Arcotanr(z):
@@ -607,7 +618,7 @@ def Atanr(z):
         res=list(res)
     return res
 '''
-    @param z takes any value, then return list or float
+@param z
 '''
 def Norm(z):
     def norma(z):
