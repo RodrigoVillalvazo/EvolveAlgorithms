@@ -1,0 +1,6 @@
+docutils>=0.3
+matplotlib>=1.0
+seaborn>=1.0
+numpy>=1.0
+deap>=1.0
+lxml==0.5a7

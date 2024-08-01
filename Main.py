@@ -1,7 +1,34 @@
-from Importer import *
+# importing sys
+import sys
+# adding Folder_2/subfolder to the system path
+sys.path.insert(0, '~/libs')
+sys.path.insert(1, '~/Simulation')
+from libs.Math import Plus, Minus, Divide, Times,Power, Maximum, Minimum, Atan2r
+from libs.Math import Sqrt, Sqr, Logn, Exp, Sinh, Cosh, Tanh, Csch, Sech, Coth, Cos, Sin, Tan, Csc, Sec, Cot, Asin, Acos, Norm, Abs, Real, Atanr
+from Simulations.Simulate import Evasion2Robots
+from libs import AlgorithmMod
+
+#No-Downlodable
+import gc
+import os
+import csv
+import time
+import math
+import socket
+import itertools
+import traceback
+import multiprocessing as MP
+#Downlodable
 import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+from deap import tools
+from deap import gp
+from deap import creator
+from deap import base
+
 N=0
-CPU_count = multiprocessing.cpu_count()-1
+CPU_count = MP.cpu_count()-1
 start = time.time()
 #   Algoritmo de Programacion Genetica para evolucionar
 #   un modelo de navegación de un robot movil.
@@ -100,9 +127,9 @@ class MyFitness:
             radio=radios[0]+radios[1]
             tolerance=0.3
             if(EX1>0)or(EX2>0):
-                fitness=NaN
+                fitness=math.NaN
             elif(EX3>0):
-                fitness=Inf
+                fitness=math.Inf
             else:
                 fitness=(ErrorPosRob1**2)+(ErrorPosRob2**2)+(ErrorTiempoR1**2)+(ErrorTiempoR2**2)#Fitness error cuadratico medio
             if (math.isnan(fitness) or math.isinf(fitness)):#Penalizamos si el fitness es infinito o si no es un numero
@@ -130,7 +157,7 @@ def MultProcess(ind,td,Npros,Ncon):
     #AlgorithmMod.update_progress("Starting pool", 1)
     #sys.stdout.write("\nStarting pool\n")
     #obj = socket.socket()
-    with Pool(processes=Npros) as pool:
+    with MP.Pool(processes=Npros) as pool:
         sys.stdout.flush()
         #multiple_results = [pool.apply_async(Fit.Fitness, args=(i,)) for i in range(Ncon)]
         multiple_results = pool.map_async(Fit.Fitness, range(Ncon))
@@ -314,7 +341,7 @@ expr = toolbox.individual()
 del pset
 gc.collect()
 if __name__=="__main__":
-    freeze_support()
+    MP.freeze_support()
     #Directorio donde se almacenaran todos los datos
     path =str('Corrida'+str(run)+'/')
     #Instrucciones para crear el directorio
@@ -334,10 +361,10 @@ if __name__=="__main__":
     stats_fit = tools.Statistics(lambda ind: ind.fitness.values)
     stats_size = tools.Statistics(len)
     mstats = tools.MultiStatistics(fitness=stats_fit, size=stats_size)
-    mstats.register("avg", numpy.mean)
-    mstats.register("std", numpy.std)
-    mstats.register("min", numpy.min)
-    mstats.register("max", numpy.max)
+    mstats.register("avg", np.mean)
+    mstats.register("std", np.std)
+    mstats.register("min", np.min)
+    mstats.register("max", np.max)
     pop = toolbox.population(n=Npop)
     hof = tools.HallOfFame(1)
     newCheckP=str('checkpoint'+str(run)+'.pkl')
@@ -352,7 +379,7 @@ if __name__=="__main__":
         best = hof.items[0]
     except:
         input("Press Enter to continue...")
-        os.kill(os.getpid(), signal.SIGTERM)
+        os.kill(os.getpid(), MP.signal.SIGTERM)
 
     bestFitness= best.fitness.values[0]
     #Extract statistics
@@ -384,7 +411,7 @@ if __name__=="__main__":
         sys.stdout.write("\nTiempo transcurrido: %f dias\n"%(finaltime/86400))
     #Finalizamos el programa
     input("Press Enter to continue...")
-    os.kill(os.getpid(), signal.SIGTERM)
+    os.kill(os.getpid(), MP.signal.SIGTERM)
 """
 Create the fitness class
 :param ind => Individual from DEAP toolbox

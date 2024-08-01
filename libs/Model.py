@@ -1,4 +1,9 @@
-from Importer import *
+from libs.Math import Plus, Divide, Times, Norm, Minus, Real
+import numpy as np
+import sys
+from math import nan as NaN
+from math import inf as Inf
+import cmath
 #Modelo del Robot #1
 def ModelKaF1TestRobot1(u,indR1,r,u0):
    AF=[0]
@@ -80,7 +85,7 @@ def ModelKaF1TestRobot1(u,indR1,r,u0):
        zeroflag=1
        pass
    except OverflowError:#Excepcion para penalizar que al momento de evaluar el individuo ocurra: division por cero, o algun error por sobreflujo(valor enorme en extremo)
-       vR1a=math.inf
+       vR1a=Inf
        OverFlag=1
        pass
    except (TypeError,MemoryError):#Excepcion para evitar operaciones con complejos y no complejos, y problemas de indeterminacion entre funciones que algun valor no este entre su dominio
@@ -190,7 +195,7 @@ def ModelKaF1TestRobot2(u,indR2,r,u0):
        zeroflag=1
        pass
    except OverflowError:#Excepcion para penalizar que al momento de evaluar el individuo ocurra: division por cero, o algun error por sobreflujo(valor enorme en extremo)
-       vR2a=math.inf
+       vR2a=Inf
        OverFlag=1
        pass
    except (TypeError,MemoryError):#Excepcion para evitar operaciones con complejos y no complejos, y problemas de indeterminacion entre funciones que algun valor no este entre su dominio

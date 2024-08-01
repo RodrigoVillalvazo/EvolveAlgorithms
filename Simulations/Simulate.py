@@ -1,5 +1,7 @@
 import csv
-from Importer import *
+import numpy as np
+from libs.Math import Plus, Times, Norm, Minus, Cos, Sin
+from libs.Model import ModelKaF1TestRobot1, ModelKaF1TestRobot2
 def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     #print(str(ind))
     #Numero de robots
