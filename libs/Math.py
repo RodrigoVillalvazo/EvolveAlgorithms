@@ -7,7 +7,7 @@ from scipy import integrate
 from scipy import fft
 warnings.filterwarnings("ignore")
 np.seterr(all='warn')
-NaN=mat.nan
+nan=mat.nan
 Inf=mat.inf
 def Integrate(x,y):
     return(integrate.fixed_quad(x,y,None))
@@ -15,617 +15,417 @@ def FFT(y,z):
     return(fft(y,z))
 def TrigSimp(y):
     return(trigsimp(y))
-def Minus(x,y):
-    '''
-    x and y take any value. 
-    Minus function map x-y, then return list or float.
-    '''
-    fail=False
-    def resta(a0,b0):#Resta de listas
-        res0=a0-b0
-        return res0
-    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
-        x=x*np.ones(len(y))
-    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
-        y=y*np.ones(len(x))
-    try:
-        res=map(resta,x,y)
-        res=list(res)
-        fail=True
-    except(TypeError):
-        x=Real(x)
-        y=Real(y)
-    finally:
-        if fail==False:
-            res=resta(x,y)
-    return res
-
-def Plus(x,y):
-    '''
-    x and y take any value. 
-    Plus function map x+y, then return list or float.
-    '''
-    fail=False
-    def suma(a1,b1):
-        res1=a1+b1
-        return res1
-    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
-        x=x*np.ones(len(y))
-    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
-        y=y*np.ones(len(x))
-    try:
-        res=map(suma,x,y)
-        res=list(res) 
-        fail=True
-    except(TypeError):
-        x=Real(x)
-        y=Real(y)
-    finally:
-        if fail==False:
-            res=suma(x,y)
-    return res
-
-def Times(x,y):
-    '''
-    x and y take any value. 
-    Times function map x*y, then return list or float.
-    '''
-    fail=False
-    def multiplicacion1D(a2,b2):
-        res2=a2*b2
-        return res2
-    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
-        x=x*np.ones(len(y))
-    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
-        y=y*np.ones(len(x))
-    try:
-        res=map(multiplicacion1D,x,y)
-        res=list(res) 
-        fail=True
-    except(TypeError):
-        x=Real(x)
-        y=Real(y)
-    finally:
-        if fail==False:
-            res=multiplicacion1D(x,y)                          
-    return res
-
-def Power(x,y):
-    '''
-    x and y take any value. 
-    Power function map x^y or x**y, then return list or float.
-    '''
-    fail=False
-    def exponente(a3,b3):
-        res3=pow(a3,b3)
-        return res3
-    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
-        x=x*np.ones(len(y))
-    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
-        y=y*np.ones(len(x))
-    try:
-        res=map(exponente,x,y)
-        res=list(res)
-        fail=True
-    except(TypeError):
-        x=Real(x)
-        y=Real(y)
-    finally:
-        if fail==False:
-            res=exponente(x,y)        
-    return res
-
-def Divide(x,y):
-    '''
-    x and y take any value. 
-    Divide function map x/y with zero division restriction, then return list or float.
-    '''
-    fail=False
-    def division(a35,b35):
+def Transltr(val0):
+    if isinstance(val0,(float,int)):
+        return val0
+    else:
         try:
-            res35=a35/b35
-        except ZeroDivisionError:
-            res35=NaN
-        return res35
-    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
-        x=x*np.ones(len(y))
-    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
-        y=y*np.ones(len(x))
-    try:
-        res=map(division,x,y)
-        res=list(res)  
-        fail=True
-    except(TypeError):
-        x=Real(x)
-        y=Real(y)
-    finally:
-        if fail==False:
-            res=division(x,y)                  
-    return res
-
-def Maximum(x,y):
-    '''
-    x and y take any value. 
-    Maximum function map max(x,y), then return list or float.
-    '''
-    fail=False
-    def MAXIMUM(a40,b40):
-        res40=max(a40,b40)
-        return res40
-    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
-        x=x*np.ones(len(y))
-    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
-        y=y*np.ones(len(x))
-    try:
-        res=map(MAXIMUM,x,y)
-        res=list(res)
-        fail=True
-    except(TypeError):
-        x=Real(x)
-        y=Real(y)
-    finally:
-        if fail==False:
-            res=MAXIMUM(x,y)
-    if(isinstance(res,list)):
-        res=max(res)
-    return res
-
-def Minimum(x,y):
-    '''
-    x and y take any value. 
-    Minimum function map min(x,y), then return list or float.
-    '''
-    fail=False
-    def MINIMUM(a41,b41):
-        res41=min(a41,b41)
-        return res41
-    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
-        x=x*np.ones(len(y))
-    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
-        y=y*np.ones(len(x))
-    try:
-        res=map(MINIMUM,x,y)
-        res=list(res)
-        fail=True
-    except(TypeError):
-        x=Real(x)
-        y=Real(y)
-    finally:
-        if fail==False:
-            res=MINIMUM(x,y)
-    if(isinstance(res,list)):
-        res=min(res)
-    return res
-
-def Atan2r(x,y):
-    '''
-    @param x
-
-    @param y
-    '''
-    fail=False
-    def arcotangente2(a42,b42):
-        try:
-            res42=np.arctan2(np.real(a42),np.real(b42))
+            ans=eval(val0.replace('"', '').replace("'", ''))
+            for a in ans:
+                if isinstance(a,(int,float)):
+                    return a
+                else:
+                    return ans
         except:
-            res42=NaN
-        return res42
-    if(isinstance(y,list)):#and(isinstance(x,(float,int))):
-        x=x*np.ones(len(y))
-    if(isinstance(x,list)):#and(isinstance(y,(float,int))):
-        y=y*np.ones(len(x))    
+            return float(val0.replace('"', '').replace("'", ''))
+        #finally:
+         #   return str(val0.replace('"', '').replace("'", ''))
+def Negate(val1):
     try:
-        res=map(arcotangente2,x,y)
-        res=list(res)  
-        fail=True
-    except(TypeError):
-        x=Real(x)
-        y=Real(y)   
-    finally:
-        if fail==False:  
-            res=arcotangente2(x,y)
-    return res
+        return -val1
+    except:
+        for item in val1:
+            try:
+                b=-float(item)
+                return b
+            except:
+                return 1       
+def Minus(x, y):
+    if isinstance(x, str):
+        x = Transltr(x)
+    if isinstance(y, str):
+        y = Transltr(y)
+    if isinstance(x, list) or isinstance(y, list):
+        if isinstance(x, (float, int)):
+            x = [x] * len(y)
+        if isinstance(y, (float, int)):
+            y = [y] * len(x)
+        try:
+            return [a - b for a, b in zip(x, y)]
+        except:
+            return x - y
+    else:
+        return x - y
+
+def Plus(x, y):
+    if isinstance(x, str):
+        x = Transltr(x)
+    if isinstance(y, str):
+        y = Transltr(y)
+    if isinstance(x, list) or isinstance(y, list):
+        if isinstance(x, (float, int)):
+            x = [x] * len(y)
+        if isinstance(y, (float, int)):
+            y = [y] * len(x)
+        try:
+            return [a + b for a, b in zip(x, y)]
+        except:
+            return x + y
+    else:
+        return x + y
+
+def Times(x, y):
+    if isinstance(x, str):
+        x = Transltr(x)
+    if isinstance(y, str):
+        y = Transltr(y)
+    if isinstance(x, list) or isinstance(y, list):
+        if isinstance(x, (float, int)):
+            x = [x] * len(y)
+        if isinstance(y, (float, int)):
+            y = [y] * len(x)
+        try:
+            return [a * b for a, b in zip(x, y)]
+        except:
+            return x * y
+    else:
+        return x * y
+
+def Power(x, y):
+    if isinstance(x, str):
+        x = Transltr(x)
+    if isinstance(y, str):
+        y = Transltr(y)
+    if isinstance(x, list) or isinstance(y, list):
+        if isinstance(x, (float, int)):
+            x = [x] * len(y)
+        if isinstance(y, (float, int)):
+            y = [y] * len(x)
+        return [a ** b for a, b in zip(x, y)]
+    else:
+        return x ** y
+
+def Divide(x, y):
+    if isinstance(x, str):
+        x = Transltr(x)
+    if isinstance(y, str):
+        y = Transltr(y)
+    if isinstance(x, list) or isinstance(y, list):
+        if isinstance(x, (float, int)):
+            x = [x] * len(y)
+        if isinstance(y, (float, int)):
+            y = [y] * len(x)
+        return [a / b if b != 0 else np.nan for a, b in zip(x, y)]
+    else:
+        return (x / y) if y !=0 else np.nan
+
+def Maximum(x, y):
+    if isinstance(x, str):
+        x = Transltr(x)
+    if isinstance(y, str):
+        y = Transltr(y)
+    if isinstance(x, list) or isinstance(y, list):
+        if isinstance(x, (float, int)):
+            x = [x] * len(y)
+        if isinstance(y, (float, int)):
+            y = [y] * len(x)
+        return max([max(a,b) for a, b in zip(x, y)])
+    else:
+        return max(x, y)
+
+def Minimum(x, y):
+    if isinstance(x, str):
+        x = Transltr(x)
+    if isinstance(y, str):
+        y = Transltr(y)
+    if isinstance(x, list) or isinstance(y, list):
+        if isinstance(x, (float, int)):
+            x = [x] * len(y)
+        if isinstance(y, (float, int)):
+            y = [y] * len(x)
+        return min([min(a, b) for a, b in zip(x, y)])
+    else:
+        return min(x, y)
+
+def Atan2r(x, y):
+    if isinstance(x, str):
+        x = Transltr(x)
+    if isinstance(y, str):
+        y = Transltr(y)
+    if isinstance(x, list) or isinstance(y, list):
+        if isinstance(x, (float, int)):
+            x = [x] * len(y)
+        if isinstance(y, (float, int)):
+            y = [y] * len(x)
+        return [np.arctan2(np.real(a), np.real(b)) for a, b in zip(x, y)]
+        #return [np.arctan2(np.real(a), np.real(b)) if isinstance(a, complex) and isinstance(b, complex) else np.nan for a, b in zip(x, y)]
+    else:
+        return np.arctan2(np.real(x), np.real(y)) #if isinstance(x, complex) and isinstance(y, complex) else np.nan
 
 def Sqrt(z):
-    '''
-    @param z
-    '''
-    def raiz(a):
-        res22=np.sqrt(a)
-        return res22
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=raiz(z)
-    except:
-        res=map(raiz,z)
-        res=list(res)
-    return res
+    #if isinstance(z, complex):
+     #   return np.sqrt(z)
+    return [np.sqrt(a) for a in z] if isinstance(z, list) else np.sqrt(z) #if isinstance(z, complex) else np.nan
 
 def Sqr(z):
-    '''
-    @param z
-    '''
-    def exponente2(a):
-        res21=pow(a,2)
-        return res21
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=exponente2(z)
-    except:
-        res=map(exponente2,z)
-        res=list(res)
-    return res
+    #if isinstance(z, complex):
+    #    return z ** 2
+    return [a ** 2 for a in z] if isinstance(z, list) else z ** 2
 
 def Logn(z):
-    '''
-    @param z
-    '''
-    def logaritmo(a):
-        try:
-            res20=np.real(ctm.log(a))
-        except:
-            res20=NaN
-        return res20
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=logaritmo(z)
-    except:
-        res=map(logaritmo,z)
-        res=list(res)        
-    return res
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.real(ctm.log(z))
+    #    except:
+    #        return np.nan
+    return [np.real(ctm.log(a)) if isinstance(a, complex) else np.nan for a in z] if isinstance(z, list) else np.real(ctm.log(z)) 
 
 def Exp(z):
-    '''
-    @param z
-    '''
-    def exponencial(a):
-        try:
-            res19=np.exp(a)
-        except:
-            res19=NaN
-        return res19
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=exponencial(z)
-    except:
-        res=map(exponencial,z)
-        res=list(res)
-    return res
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.exp(z)
+    #    except:
+    #        return np.nan
+    
+    return [np.exp(a) for a in z] if isinstance(z, list) else np.exp(z) 
 
 def Sinh(z):
-    '''
-    @param z
-    '''
-    def senohyperbolico(a):
-        try:
-            res18=np.sinh(a)
-        except:
-            res18=NaN
-        return res18
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=senohyperbolico(z)
-    except:
-        res=map(senohyperbolico,z)
-        res=list(res)
-    return res
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.sinh(z)
+    #    except:
+    #        return np.nan
+    return [np.sinh(a) for a in z] if isinstance(z, list) else np.sinh(z) 
 
 def Cosh(z):
-    '''
-    @param z
-    '''
-    def cosenohyperbolico(z):
-        try:
-            res17=np.cosh(z)
-        except:
-            res17=NaN
-        return res17
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=cosenohyperbolico(z)
-    except:
-        res=map(cosenohyperbolico,z)
-        res=list(res)
-    return res
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.cosh(z)
+    #    except:
+    #        return np.nan
+    return [np.cosh(a) for a in z] if isinstance(z, list) else np.cosh(z) 
+
 def Tanh(z):
-    '''
-    @param z
-    '''
-    def tangentehyperbolica(z):
-        try:
-            res16=np.tanh(z)
-        except:
-            res16=NaN
-        return res16
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=tangentehyperbolica(z)
-    except:
-        res=map(tangentehyperbolica,z)
-        res=list(res)
-    return res
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.tanh(z)
+    #    except:
+    #        return np.nan
+    return [np.tanh(a) for a in z] if isinstance(z, list) else np.tanh(z) 
+
 def Csch(z):
-    '''
-    @param z
-    '''
-    def cosecantehyperbolica(z):
-        try:
-            res15=1/np.sinh(z)
-        except:
-            res15=NaN
-        return res15
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=cosecantehyperbolica(z)
-    except:
-        res=map(cosecantehyperbolica,z)
-        res=list(res)
-    return res
+    #if isinstance(z, complex):
+    #    try:
+    #        return 1 / np.sinh(z)
+    #    except:
+    #        return np.nan
+    return [1 / np.sinh(a) for a in z] if isinstance(z, list) else 1 / np.sinh(z) 
+
 def Sech(z):
-    '''
-    @param z
-    '''
-    def secantehyperbolica(z):
-        try:
-            res14=1/np.cosh(z)
-        except:
-            res14=NaN
-        return res14
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=secantehyperbolica(z)
-    except:
-        res=map(secantehyperbolica,z)
-        res=list(res)
-    return res
+    #if isinstance(z, complex):
+    #    try:
+    #        return 1 / np.cosh(z)
+    #    except:
+    #        return np.nan
+    return [1 / np.cosh(a) for a in z] if isinstance(z, list) else 1 / np.cosh(z)
+
 def Coth(z):
-    '''
-    @param z
-    '''
-    def cotangentehyperbolica(z):
-        try:
-            res13=np.cosh(z)/np.sinh(z)
-        except:
-            res13=NaN
-        return res13
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=cotangentehyperbolica(z)
-    except:
-        res=map(cotangentehyperbolica,z)
-        res=list(res)
-    return res
-  
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.cosh(z) / np.sinh(z)
+    #    except:
+    #        return np.nan
+    return [np.cosh(a) / np.sinh(a) for a in z] if isinstance(z, list) else np.cosh(z) / np.sinh(z) 
+
 def Sign(z):
-    '''
-    @param z
-    '''  
-    def signo(z):
-        try:
-            res12=np.sign(z)
-        except:
-            res12=NaN
-        return float(res12)
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=signo(z)
-    except:
-        res=map(signo,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, complex):
+    #    try:
+    #        return float(np.sign(z))
+    #    except:
+    #        return np.nan
+    return [float(np.sign(a)) for a in z] if isinstance(z, list) else float(np.sign(z))
+
 def Cos(z):
-    def coseno(z):
-        try:
-            res11=np.cos(z)
-        except:
-            res11=NaN
-        return res11
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=coseno(z)
-    except:
-        res=map(coseno,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, (float,int)):
+    #    try:
+    #        return np.cos(z)
+    #    except:
+    #        return np.nan
+    return [np.cos(a) for a in z] if isinstance(z, list) else np.cos(z) 
+
 def Sin(z):
-    def sinusoidal(z):
-        try:
-            res10=np.sin(z)
-        except:
-            res10=NaN
-        return res10
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=sinusoidal(z)    
-    except:
-        res=map(sinusoidal,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.sin(z)
+    #    except:
+    #        return np.nan
+    #else:
+    return [np.sin(a) for a in z] if isinstance(z, list) else np.sin(z) #if isinstance(z, complex) else np.nan 
+
+    #return [np.sin(a) for a in z] #if isinstance(z, list) else np.sin(z) if isinstance(z, complex) else np.nan
+
 def Tan(z):
-    def tangente(z):
-        try:
-            res9=np.tan(z)
-        except:
-            res9=NaN
-        return res9
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=tangente(z)
-    except:
-        res=map(tangente,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.tan(z)
+    #    except:
+    #        return np.nan
+    return [np.tan(a) for a in z] if isinstance(z, list) else np.tan(z)
+
 def Csc(z):
-    def cosecante(z):
-        try:
-            res8=1/np.sin(z)
-        except:
-            res8=NaN
-        return res8
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=cosecante(z)
-    except:
-        res=map(cosecante,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, complex):
+    #    try:
+    #        return 1 / np.sin(z)
+    #    except:
+    #        return np.nan
+    return [1 / np.sin(a) for a in z] if isinstance(z, list) else 1 / np.sin(z)
+
 def Sec(z):
-    def secante(z):
-        try:
-            res7=1/np.cos(z)
-        except:
-            res7=NaN
-        return res7
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=secante(z)
-    except:
-        res=map(secante,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, complex):
+    #    try:
+    #        return 1 / np.cos(z)
+    #    except:
+    #        return np.nan
+    return [1 / np.cos(a) for a in z] if isinstance(z, list) else 1 / np.cos(z) 
+
 def Cot(z):
-    def cotangente(z):
-        try:
-            res6=np.cos(z)/np.sin(z)
-        except:
-            res6=NaN
-        return res6
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=cotangente(z)
-    except:
-        res=map(cotangente,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.cos(z) / np.sin(z)
+    #    except:
+    #        return np.nan
+    return [np.cos(a) / np.sin(a) for a in z] if isinstance(z, list) else np.cos(z) / np.sin(z)
+
 def Asin(z):
-    def arcosin(z):
-        try:
-            res5=np.real(ctm.asin(z))
-        except:
-            res5=NaN
-        return res5
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=arcosin(z)
-    except:
-        res=map(arcosin,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''    
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.real(ctm.asin(z))
+    #    except:
+    #        return np.nan
+    return [np.real(ctm.asin(a)) if isinstance(a, complex) else np.nan for a in z] if isinstance(z, list) else np.real(ctm.asin(z))
+
 def Acos(z):
-    def arcocoseno(z):
-        try:
-            res4=np.real(ctm.acos(z))
-        except:
-            res4=NaN
-        return res4
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=arcocoseno(z)
-    except:
-        res=map(arcocoseno,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.real(ctm.acos(z))
+    #    except:
+    #        return np.nan
+    return [np.real(ctm.acos(a)) if isinstance(a, complex) else np.nan for a in z] if isinstance(z, list) else np.real(ctm.acos(z))
+
 def Abs(z):
-    def absoluto(z):
-        res3=abs(z)
-        return res3
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=absoluto(z)
-    except:
-        res=map(absoluto,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, complex):
+    #    return abs(z)
+    return [abs(a) for a in z] if isinstance(z, list) else abs(z)
+
 def Real(z):
-    def real(z):
-        if ((isinstance(z,float)or isinstance(z,int) or isinstance(z,np.float64))):
-            res2=np.real(z)
-        else:
-            res2=np.real(z.all())
-        return res2
-    try:
-        res=real(z)
-    except:
-        res=map(real,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    if isinstance(z, str):
+        z = Transltr(z)
+    #if isinstance(z, complex):
+    #    return np.real(z)
+    return [np.real(a) for a in z] if isinstance(z, list) else np.real(z)
+
 def Atanr(z):
-    def Arcotanr(z):
-        try:
-                res1=np.real(ctm.atan(z))
-        except:
-                res1=NaN
-        return res1
-    if (isinstance(z,complex)):
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, complex):
         z=Real(z)
-    try:
-        res=Arcotanr(z)
-    except:
-        res=map(Arcotanr,z)
-        res=list(res)
-    return res
-'''
-@param z
-'''
+    #if isinstance(z, complex):
+    #    try:
+    #        return np.real(ctm.atan(z))
+    #    except:
+    #        return np.nan
+    return [np.real(ctm.atan(a)) if isinstance(a, complex) else np.nan for a in z] if isinstance(z, list) else np.real(ctm.atan(z))
+
 def Norm(z):
-    def norma(z):
-        res0=np.real(np.linalg.norm(z))
-        return res0
-    try:
-        res=norma(z)
-    except:
-        res=norma(z.tolist())
-    return res
+    if isinstance(z, str):
+        z = Transltr(z)
+    if isinstance(z, list):
+        z = np.array(z)
+    if isinstance(z, complex):
+        try:
+            z=Real(z)    
+        except:
+            z.all()
+    #if isinstance(z, complex):
+    #    return np.real(np.linalg.norm(z))
+    return [float(np.linalg.norm(z)) for a in z] if isinstance(z, list) else np.linalg.norm(z)

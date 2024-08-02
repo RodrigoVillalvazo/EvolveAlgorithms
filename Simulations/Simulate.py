@@ -1,4 +1,3 @@
-import csv
 import numpy as np
 from libs.Math import Plus, Times, Norm, Minus, Cos, Sin
 from libs.Model import ModelKaF1TestRobot1, ModelKaF1TestRobot2
@@ -23,21 +22,11 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     r=[rRob1,rRob2]#Radio de los robots y obstaculos
     pos=[Rob1,Rob2,PdR1,PdR2]#Vector de Condiciones iniciales
     pd=[pos[2],pos[3]]#Vector de posiciones deseadas
-    TF=0
-    zF=0
-    OF=0
-    EF=0
     tR1=0
     tR2=0
     aux1=1
     aux2=1
-    zeroF=[]#Contador de banderas por division cero
-    TypeF=[]#Contador de banderas por error de tipo
-    OverF=[]#Contador de banderas por sobreflujo de datos
-    ErrorF=[]#Contador de banderas por error de valor
     aux10=[]
-    FLR1=[]
-    FLR2=[]
     vxR1=[]#list
     vxR2=[]#list
     vyR1=[]#list
@@ -126,8 +115,8 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     i=1
     #Obtener velocidades
     radiO=(r1+r2)+ep
-    FlagsR1,vR1=ModelKaF1TestRobot1(u,ind,r,u0R1)
-    FlagsR2,vR2=ModelKaF1TestRobot2(u,ind,r,u0R2)
+    vR1=ModelKaF1TestRobot1(u,ind,r,u0R1)
+    vR2=ModelKaF1TestRobot2(u,ind,r,u0R2)
 
     #vR1=[vR1]
     #vR2=[vR2]
@@ -135,7 +124,7 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     qR1=[qR1]
     qR2=[qR2]
      
-    while (tR1<=tf)and(tR2<=tf)and(dsR1>radiO)and(dsR2>radiO)and(zF==0)and(TF==0)and(OF==0)and(EF==0):
+    while (tR1<=tf)and(tR2<=tf)and(dsR1>radiO)and(dsR2>radiO):
         if(dsR1<radiO):
             print(dsR1)
         if(dsR2<radiO):
@@ -181,20 +170,11 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
         #cd=GeronovirtualModel(Cd,tR1)
         PdR1=Plus(cd,Times(rCen,Vdir1))
         PdR2=Plus(cd,Times(rCen,Vdir2))    
-        FlagsR1,vR1[i]=ModelKaF1TestRobot1(u,ind,r,u0R1)                 #obtener una nueva velocidad del robot 1
+        vR1[i]=ModelKaF1TestRobot1(u,ind,r,u0R1)                 #obtener una nueva velocidad del robot 1
         VxR1,VyR1=vR1[i]
-        FLR1.append(FlagsR1)
-        FlagsR2,vR2[i]=ModelKaF1TestRobot2(u,ind,r,u0R2)                 #obtener una nueva velocidad del robot 2
+        vR2[i]=ModelKaF1TestRobot2(u,ind,r,u0R2)                 #obtener una nueva velocidad del robot 2
         VxR2,VyR2=vR2[i]
-        FLR2.append(FlagsR2)
-        zeroF=FlagsR1[0]+FlagsR2[0]
-        zF=zeroF
-        TypeF=FlagsR1[1]+FlagsR2[1]
-        TF=TypeF
-        OverF=FlagsR1[2]+FlagsR2[2]
-        OF=OverF
-        ErrorF=FlagsR1[3]+FlagsR2[3]
-        EF=ErrorF
+
         u[6]=VxR1
         u[7]=VyR1
         u[8]=VxR2
@@ -243,10 +223,10 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
         u[15]=tR2
 
         #archivo.write(str(xo1[i-1])+","+str(yo1[i-1])+","+str(v[i-1][0])+","+str(v[i-1][1])+","+str(t)+","+str(dr)+","+str(do)+","+str(d)+","+str(ds)+","+str(xc1)+","+str(yc1)+","+str(p[i-1])+"\n")
-        s=[tR1saved,tR2saved,Try1,vxR1,vyR1,tsR1,drR1a,doR1a,dR1a,0,Try2,Try3,Try4,dsR1a,dR2a,vrR2,doR2a,drR2a,dsR2a,tsR2,dsR1,dsR2,vxR2,vyR2,zeroF,TypeF,OverF,ErrorF,0,0,0,0,cdxa,cdya]
+        s=[tR1saved,tR2saved,Try1,vxR1,vyR1,tsR1,drR1a,doR1a,dR1a,0,Try2,Try3,Try4,dsR1a,dR2a,vrR2,doR2a,drR2a,dsR2a,tsR2,dsR1,dsR2,vxR2,vyR2,0,0,0,0,0,0,0,0,cdxa,cdya]
         pdT=[PdR1,PdR2]
         vect=[r,pd,pdT]
-    return s,vect
+    return s, vect
 
 
 def CirclevirtualModel(Ci,phi,dt):

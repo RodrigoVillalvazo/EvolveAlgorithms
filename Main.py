@@ -1,12 +1,13 @@
 # importing sys
 import sys
+import signal
 # adding Folder_2/subfolder to the system path
 sys.path.insert(0, '~/libs')
 sys.path.insert(1, '~/Simulation')
 from libs.Math import Plus, Minus, Divide, Times,Power, Maximum, Minimum, Atan2r
 from libs.Math import Sqrt, Sqr, Logn, Exp, Sinh, Cosh, Tanh, Csch, Sech, Coth, Cos, Sin, Tan, Csc, Sec, Cot, Asin, Acos, Norm, Abs, Real, Atanr
-from Simulations.Simulate import Evasion2Robots
 from libs import AlgorithmMod
+from libs import OmnFitness
 
 #No-Downlodable
 import gc
@@ -53,121 +54,21 @@ Proc=9
 #Numero de corrida
 run=int(N)
 #Participantes en el torneo
-if(Npop>=10):
-    winners=7
-else:
-    winners=1
-class MyFitness:
-    def __init__(self,ind):
-        self.ind = ind
-    def DesTime(self,td):
-        self.td = td
-    def Fitness(self,Npros):
-            FileD=open('Training.txt')#Direccion contenedora del archivo de condiciones iniciales
-            td=self.td
-            ind=self.ind
-            i=Npros
-            #tf=lineData[5][i]#Tiempo de simulacion
-            #Variabl
-            nk=0
-            ne=0
-            reader=csv.reader(FileD, delimiter=' ',skipinitialspace=True)#Leemos todo el documento
-            lineData = list()#variable para las lineas
-            cols=next(reader)#variable para las columnas
-            #  Leemos las columnas
-            for col in cols:
-                lineData.append(list())
-            #Leemos las lineas
-            for line in reader:
-                for j in range(0,len(lineData)):
-                    lineData[j].append(line[j])
-            #Guardamos el resultado como un diccionario
-            data=dict()
-            for j in range(0, len(cols)):
-                data[j]=lineData[j]
-            Cd=[0.5,0.5]
-            #Hacemos un barrido de las condiciones inciales y accedemos a las que necesitemos
-            Rob1=[lineData[0][i],lineData[1][i]]#Posicion inicial del robot 1
-            Rob2=[lineData[2][i],lineData[3][i]]#Posicion inicial del robot 2
-            #td=float(eval(str(lineData[6][i]).replace('"', '').replace("'", '')))
-            tf=4.50
-            rRob1,rRob2=0.02,0.02#Radio del robot 1 y robot2
-            s,Desires=Evasion2Robots(ind,tf,td,FileD,Rob1,Rob2,rRob1,rRob2,Cd)#Simulacion de los robots para cada condicion inicial y cada individuo
-            radios=Desires[0]
-            pd=Desires[1]
-            PdR1=pd[0]
-            PdR2=pd[1]
-            #Tiempo que tardo en llegar el robot
-            timeSavedR1=s[0]
-            timeSavedR2=s[1]
-            #Variable temporal almacendada para cada robot
-            timeR1=s[5]#Variable t del robot 1
-            timeR2=s[19]#Variable t del robot 2
-            Try1=s[2]#Posicion en el eje X del robot 1
-            Try2=s[10]#Posicion en el eje Y del robot 1
-            Try3=s[11]#Posicion en el eje X del robot 2
-            Try4=s[12]#Posicion en el eje Y del robot 2
-            dsR1=s[20]#Distancia entre cada robot visto desde el robot 1
-            dsR2=s[21]#Distancia entre cada robot visto desde el robot 2
-            EX1=s[24]
-            EX2=s[25]
-            EX3=s[26]
-            EX4=s[27]
-                
-            n1=np.size(timeR1)-1#Variable auxiliar
-            n2=np.size(timeR2)-1#Variable auxiliar
-                        
-            TryR1=[Try1[n1],Try2[n1]]#Vector posicion del robot 1
-            TryR2=[Try3[n2],Try4[n2]]#Vector posicion del robot 2
-                        
-            ErrorPosRob1=np.linalg.norm([TryR1[0]-PdR1[0],TryR1[1]-PdR1[1]])#Error de posicion del robot 1
-            ErrorPosRob2=np.linalg.norm([TryR2[0]-PdR2[0],TryR2[1]-PdR2[1]])#Error de posicion del robot 2
-            ErrorTiempoR1=abs(timeSavedR1-td)#Error del tiempo de llegada del robot 1 y el tiempo limite
-            ErrorTiempoR2=abs(timeSavedR2-td)#Error del tiempo de llegada del robot 2 y el tiempo limite
-            radio=radios[0]+radios[1]
-            tolerance=0.3
-            if(EX1>0)or(EX2>0):
-                fitness=math.NaN
-            elif(EX3>0):
-                fitness=math.Inf
-            else:
-                fitness=(ErrorPosRob1**2)+(ErrorPosRob2**2)+(ErrorTiempoR1**2)+(ErrorTiempoR2**2)#Fitness error cuadratico medio
-            if (math.isnan(fitness) or math.isinf(fitness)):#Penalizamos si el fitness es infinito o si no es un numero
-                fitness=5000000.0;
-                #nfa=nfa+1;
-            elif((dsR1<=radio)and(dsR2<=radio)):
-                fitness=3000000.0;
-            elif((timeSavedR1==0)and(ErrorTiempoR1>tolerance)):#Penalizamos la diferencia entre tiempos de llegada de cada robot
-                fitness=4000000.0
-            elif((timeSavedR2==0)and(ErrorTiempoR2>tolerance)):#Penalizamos la diferencia entre tiempos de llegada de cada robot
-                fitness=4000000.0
-            elif((RuntimeWarning==True)or(RuntimeError==True)or(ValueError==True)):
-                fitness=6000000.0
-            else:
-                fitness=(ErrorPosRob1**2)+(ErrorPosRob2**2)+(ErrorTiempoR1**2)+(ErrorTiempoR2**2)#Fitness error cuadratico medio
-            return fitness,      
+winners=7
 def MultProcess(ind,td,Npros,Ncon):
-    Fit=MyFitness(ind)
+    Fit=OmnFitness.OmnFitness(ind)
     Fit.DesTime(td)
     i=[]
     TimeExec='TimeByExecution.csv'
     FILEGTIME=open(TimeExec,'a')
     firstTime=time.time()
-    #time.sleep(1)
-    #AlgorithmMod.update_progress("Starting pool", 1)
-    #sys.stdout.write("\nStarting pool\n")
-    #obj = socket.socket()
-    with MP.Pool(processes=Npros) as pool:
+    with MP.Pool(processes=2) as pool:
         sys.stdout.flush()
         #multiple_results = [pool.apply_async(Fit.Fitness, args=(i,)) for i in range(Ncon)]
         multiple_results = pool.map_async(Fit.Fitness, range(Ncon))
         #multiple_results = [pool.map_async(Fit.Fitness, args=(i,)) for i in range(Ncon)]
-        #if len(multiple_results._cache)>2e3:
-        #sys.stdout.write("\nEsperando limpieza de cache\n")
-        multiple_results.wait(timeout=70)
+        multiple_results.wait(timeout=120)
         if multiple_results.ready():
-            #AlgorithmMod.update_msg("Pool Ready", 1)
-            #sys.stdout.write("\nPool Ready\n")
             conn=False
             pool.close()
             pool.join()
@@ -179,7 +80,6 @@ def MultProcess(ind,td,Npros,Ncon):
         else:
             conn=True
             AlgorithmMod.update_msg("Pool Not Ready Yet Killing threads", 1)
-            #sys.stdout.write("\nPool Not Ready Yet Killing childs\n")
             pool.terminate()
             pool.join()
     Values=multiple_results._value
@@ -187,19 +87,15 @@ def MultProcess(ind,td,Npros,Ncon):
         for j in range(Ncon):
             try:
                 if(Values[j] is None):
-                    Values[j]=7000000.0
+                    Values[j]=70.0
                 else:
                     Values[j]=Values[j][0]
             except:
-                Values=[8000000.0]
+                Values=[80.0]
                 break
         pass
         mfitness=Values
         #mfitness=multiple_results
-      #  try:
-         #   obj.connect(host)
-       # except:
-          #  obj.close()
         break
     else:
         mfitness=Values
@@ -218,9 +114,8 @@ def MultProcess(ind,td,Npros,Ncon):
     return MYFitness,     
 
 
+
 toolbox = base.Toolbox()
-OutARGS=[float,float,float,float,float,float,float,float,float,float]
-#pset = gp.PrimitiveSetTyped("main",NumARGS,float)
 pset = gp.PrimitiveSetTyped("MAIN",itertools.repeat(float,28),float)
 time.sleep(0.01)
 #history = tools.History()
@@ -237,9 +132,7 @@ toolbox.register("expr_mut", gp.genFull, min_=1, max_=11)
 toolbox.register("mutate", gp.mutUniform, expr=toolbox.expr_mut, pset=pset)
 # Decorate the variation operators
 #toolbox.decorate("mate", gp.staticLimit(key=operator.attrgetter("height"), max_value=11))
-#toolbox.decorate("mate", gp.staticLimit(key=operator.attrgetter("weigth"), max_value=11))
 #toolbox.decorate("mutate", gp.staticLimit(key=operator.attrgetter("height"), max_value=11))    
-#toolbox.decorate("mutate", gp.staticLimit(key=operator.attrgetter("weigth"), max_value=11))    
 #Parametros
 pset.addPrimitive(Plus,[float,float],float)#Suma normalizada
 pset.addPrimitive(Minus,[float,float],float)#Resta normalizada
@@ -272,10 +165,6 @@ pset.addPrimitive(Norm,[float],float)#norma
 pset.addPrimitive(Abs,[float],float)#absoluto
 pset.addPrimitive(Real,[float],float)#real
 pset.addPrimitive(Atanr,[float],float)#arcotangente real
-#Arity 3 or special operators
-#pset.addPrimitive(Integrate,[float,float],float)#arcotangente real
-#pset.addPrimitive(TrigSimp,[float],float)#arcotangente real
-#pset.addPrimitive(FFT,[float,float],float)#arcotangente real
 #Terminales
 pset.addTerminal("q1",str)#0
 pset.addTerminal("q2",str)#1
@@ -379,7 +268,7 @@ if __name__=="__main__":
         best = hof.items[0]
     except:
         input("Press Enter to continue...")
-        os.kill(os.getpid(), MP.signal.SIGTERM)
+        os.kill(os.getpid(), signal.SIGTERM)
 
     bestFitness= best.fitness.values[0]
     #Extract statistics
