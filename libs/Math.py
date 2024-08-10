@@ -398,10 +398,12 @@ def Abs(z):
     return [abs(a) for a in z] if isinstance(z, list) else abs(z)
 
 def Real(z):
+    try:
+        z=all(z)
+    except:
+        z=z
     if isinstance(z, str):
         z = Transltr(z)
-    #if isinstance(z, complex):
-    #    return np.real(z)
     return [np.real(a) for a in z] if isinstance(z, list) else np.real(z)
 
 def Atanr(z):

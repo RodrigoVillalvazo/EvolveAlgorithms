@@ -50,7 +50,7 @@ Npop=10#Decrease factor
 Ncon=10
 #condicionador, el factor debe ser menor al numero de condiciones
 #Factor=Factorial*round(Ngen*((abs(((CPU_count*Ncon)*0.25)-Ncon))/Npop))#Factor de condicion para procesos respecto a las condiciones disponibles
-Proc=9
+Proc=2
 #Numero de corrida
 run=int(N)
 #Participantes en el torneo
@@ -62,12 +62,12 @@ def MultProcess(ind,td,Npros,Ncon):
     TimeExec='TimeByExecution.csv'
     FILEGTIME=open(TimeExec,'a')
     firstTime=time.time()
-    with MP.Pool(processes=2) as pool:
+    with MP.Pool(processes=Npros) as pool:
         sys.stdout.flush()
         #multiple_results = [pool.apply_async(Fit.Fitness, args=(i,)) for i in range(Ncon)]
         multiple_results = pool.map_async(Fit.Fitness, range(Ncon))
         #multiple_results = [pool.map_async(Fit.Fitness, args=(i,)) for i in range(Ncon)]
-        multiple_results.wait(timeout=120)
+        multiple_results.wait(timeout=(600/Npros))
         if multiple_results.ready():
             conn=False
             pool.close()
@@ -117,7 +117,7 @@ def MultProcess(ind,td,Npros,Ncon):
 
 toolbox = base.Toolbox()
 pset = gp.PrimitiveSetTyped("MAIN",itertools.repeat(float,28),float)
-time.sleep(0.01)
+#time.sleep(0.01)
 #history = tools.History()
 creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
 creator.create("Individual", gp.PrimitiveTree, fitness=creator.FitnessMin,pset=pset)

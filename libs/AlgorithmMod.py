@@ -157,7 +157,8 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
     -> Save logbook from start, before was saved at end.
     -> Add some memory status and fitness tracking for files.
     """
-    File2HoF=str(dir+'HOFPoP.txt')
+    File2HoF=str(dir+'HOF.txt')
+    tracemalloc.start()
     counter=0
     start_gen = 0
     #sys.stdout.write(dir_path+'/'+dir)
@@ -184,7 +185,6 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
             #break
     else:
         # Start a new evolution
-        tracemalloc.start()
         sys.stdout.write("\n")
         sys.stdout.write("Creando nueva evolucion")
         sys.stdout.write("\n")
@@ -195,18 +195,18 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
         invalid_ind = [ind for ind in population if not ind.fitness.valid]
         fitnesses = toolbox.map(toolbox.evaluate, invalid_ind)
         FILEHOF=open(File2HoF,'a')
-        File2Gena=str(dir+'GENPoPBase.txt')
+        File2Gena=str(dir+'Base.txt')
         #FILEGEN=open(File2Gen,'a')
+        FILEGEN=open(File2Gena,'a')
         for ind, fit in zip(invalid_ind, fitnesses):
-            FILEGEN=open(File2Gena,'a')
             ind.fitness.values = fit
             current, peak = tracemalloc.get_traced_memory()
             strpop=str(population[counter])
             strfit=str(population[counter].fitness.values[0])
             FILEGEN.write(f"{counter};"+f"{strpop};"+f"{strfit};"+f" Current memory: {current / 10**4}MB; Peak: {peak / 10**4}MB;\n")
             FILEGEN.write('\n')
-            FILEGEN.close()
             counter=counter+1
+        FILEGEN.close()
         #FILEGEN.close()
         if halloffame is None:
             raise ValueError("halloffame parameter must not be empty!")
@@ -229,11 +229,9 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
         #    current, peak = tracemalloc.get_traced_memory()
         #    FILEGEN.write(str(population[m])+"; "+str(population[m].fitness.values[0])+f"; Current memory: {current / 10**4}MB; Peak: {peak / 10**4}MB;\n")
         #    FILEGEN.write('\n')
-        tracemalloc.stop()
     # Begin the generational process   
     #Naming the best individual for generation data file
     hof_size = len(halloffame.items) if halloffame.items else 0
-    tracemalloc.start()
     for gen in range(start_gen, ngen + 1):
         current, peak = tracemalloc.get_traced_memory()
         # Select the next generation individuals
@@ -248,18 +246,18 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
         invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
         fitnesses = toolbox.map(toolbox.evaluate, invalid_ind)
         #Saving the generation
-        File2Gen=str(dir+'GENPoP-'+str(gen)+'.txt')
+        File2Gen=str(dir+'Offspring-'+str(gen)+'.txt')
         counter=0
+        FILE2GEN=open(File2Gen,'a')
         for ind, fit in zip(invalid_ind, fitnesses):
-            FILE2GEN=open(File2Gen,'a')
             ind.fitness.values = fit
             current, peak = tracemalloc.get_traced_memory()
             strpop=str(offspring[counter])
             strfit=str(offspring[counter].fitness.values[0])
             FILE2GEN.write(f"{counter};"+f"{strpop};"+f"{strfit};"+f" Current memory: {current / 10**4}MB; Peak: {peak / 10**4}MB;\n")
             FILE2GEN.write('\n')
-            FILE2GEN.close()
             counter=counter+1
+        FILE2GEN.close()
         # add the best back to population:
         offspring.extend(halloffame.items)
         # Update the hall of fame with the generated individuals
@@ -298,7 +296,7 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
             MyOutFile.close()
         #FILEGEN.close()
         #FILE2GEN.close()
-    tracemalloc.stop()
     update_progress("Corriendo GP - Gen:"+str(gen)+"/"+str(ngen), 1)
     sys.stdout.flush()
+    tracemalloc.stop()
     return population, logbook

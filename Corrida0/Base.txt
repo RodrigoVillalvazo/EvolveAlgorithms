@@ -1,0 +1,20 @@
+0;Norm(Minus(Sech(Maximum(Logn(Exp(Sqr(Sinh(Abs(OrR1R1))))), Atanr(Csc(Cot(Csc(Exp(V2))))))), Coth(Atan2r(Plus(Coth(Logn(Acos(Csch(Vx2)))), Coth(Sec(Minimum(Atan2r(V2, qy1), Sinh(xdp1))))), Sech(Divide(Asin(Exp(Cos(q2))), Csc(Asin(Atanr(Vx1)))))))));70.0; Current memory: 67.5789MB; Peak: 73.4164MB;
+
+0;Abs(Atan2r(Minus(Csc(qy1), Csch(OrR1R1)), Sin(Tanh(xdp2))));70.0; Current memory: 72.2447MB; Peak: 74.936MB;
+
+1;Logn(V1);72.27000000000001; Current memory: 74.8955MB; Peak: 82.6218MB;
+
+2;Sech(Acos(Tanh(Abs(Divide(xdp1, qy1)))));2.2581884466499558; Current memory: 73.1084MB; Peak: 84.3133MB;
+
+3;Sin(Logn(Norm(Real(Minimum(Power(Sec(Tan(V2)), Csch(Cos(Vx2))), Sqrt(Abs(Cosh(Vx2))))))));16.778106259910356; Current memory: 74.7918MB; Peak: 84.3133MB;
+
+4;Minimum(Tan(yd1), Vx2);2.4381504005712378; Current memory: 76.6554MB; Peak: 84.5556MB;
+
+5;Exp(Acos(Logn(Sin(Exp(Sqrt(qx2))))));49.59520170271456; Current memory: 78.3338MB; Peak: 86.1571MB;
+
+6;Sech(Csc(Abs(Exp(t2))));2.255166569129724; Current memory: 80.0847MB; Peak: 87.9044MB;
+
+7;Cot(Sqr(Asin(Power(Vy1, t1))));72.21391326502419; Current memory: 78.6077MB; Peak: 87.9044MB;
+
+8;Csc(t2);61.17; Current memory: 80.1679MB; Peak: 88.0059MB;
+
