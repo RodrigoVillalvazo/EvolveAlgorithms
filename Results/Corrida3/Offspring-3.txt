@@ -1,0 +1,12 @@
+0;Minus(Norm(qx2), Cos(t1));69.201877541972;
+
+1;Minus(Norm(qx2), Cos(t1));69.201877541972;
+
+2;Minus(Norm(qx2), Cos(t1));71.00191936361657;
+
+3;Minus(Norm(qx2), Cos(t1));69.60190100257228;
+
+4;Minus(Norm(qx2), qx2);72.00006268847349;
+
+5;Minus(Norm(Cos(t1)), Cos(t1));72.00004645199117;
+

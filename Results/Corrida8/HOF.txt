@@ -1,0 +1,11 @@
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0
+Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(td)), ydp1); 70.0

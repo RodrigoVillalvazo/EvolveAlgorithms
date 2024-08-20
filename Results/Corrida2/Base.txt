@@ -1,0 +1,4 @@
+0;Cosh(Plus(Sqrt(Coth(Sin(Csch(Sqr(Atanr(Cosh(Minus(Abs(qx1), Minimum(yd1, yd1))))))))), Norm(Csc(Sec(Csc(Sin(Sinh(Sin(Sech(Cosh(ydp1)))))))))));70.60004912515646;
+
+1;Logn(Divide(Atan2r(td, q1), Exp(xd2)));72.27000000000001;
+

@@ -1,0 +1,1 @@
+Sin(Real(Sec(Sqrt(Sec(Atan2r(Sin(Cot(Coth(Exp(Real(qy2))))), Logn(Tan(Minus(Logn(Tan(Vx2)), Norm(Minimum(qy2, qy1))))))))))); 70.0

@@ -1,0 +1,16 @@
+0;Minus(Cos(t1), Cos(t1));72.00006268847349;
+
+1;Minus(Norm(qx2), Norm(qx2));72.00006268847349;
+
+2;Minus(Cos(t1), Cos(t1));70.0;
+
+3;Minus(Norm(Cot(xd1)), Norm(qx2));72.00004867671178;
+
+4;Minus(Norm(qx2), qx2);70.8000409959296;
+
+5;Minus(Norm(Cos(t1)), Cos(t1));72.00004645199117;
+
+6;Minus(Norm(qx2), t1);72.00016790354428;
+
+7;Minus(Norm(qx2), Cos(Cos(t1)));70.40003432156425;
+

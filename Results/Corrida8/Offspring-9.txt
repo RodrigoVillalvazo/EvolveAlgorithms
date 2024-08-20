@@ -1,0 +1,16 @@
+0;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), xd1))), Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Sinh(Minus(Exp(Tanh(Sinh(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Minus(xdp1, qy1)))))))), Minimum(Maximum(qx2, xd1), Cot(qy1)))))), Minimum(Maximum(qx2, xd1), Cot(qy1)))))), ydp1)))));70.0;
+
+1;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), xd1))), Maximum(Csc(Cosh(Sqr(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Minus(xdp1, qy1)))))))), ydp1)))));70.0;
+
+2;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(yd2)))), xd1))), Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Sinh(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Minus(xdp1, qy1)))))))), Minimum(Maximum(qx2, xd1), Cot(qy1)))))), ydp1)))));70.0;
+
+3;Maximum(Power(Sinh(Minus(t2, Cot(Tanh(Asin(Norm(xd2)))))), Norm(td)), ydp1);70.0;
+
+4;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), xd1))), Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Csc(Cosh(Sqr(Minus(Exp(Tanh(Sinh(Times(Cosh(Minus(yd2, qx1)), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Minus(xdp1, qy1)))))))), Minimum(Maximum(qx2, xd1), Cot(qy1)))))))), Minimum(Maximum(qx2, xd1), Cot(qy1)))))), ydp1)))));70.0;
+
+5;Maximum(Power(Sinh(Abs(Tan(Logn(ydp2)))), Norm(td)), ydp1);70.0;
+
+6;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Tanh(Divide(Tan(Logn(Minimum(Power(xd2, yd2), Sin(Sinh(Times(Cosh(Abs(Minus(Norm(Minus(Sin(Maximum(Tan(Cos(xdp1)), Real(Sqr(td)))), Sinh(Csch(Cosh(Power(qy2, Vx2)))))), Sqr(Sech(Atanr(Sech(Minus(Atanr(qx1), Tan(yd2))))))))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Cos(t1)))))))))), Maximum(Maximum(qx2, xd1), ydp1))), Asin(xd1)), Abs(Csc(t2)))), xd1))), Maximum(Csc(Cosh(Sqr(Minus(td, Minimum(Maximum(qx2, xd1), Cot(qy1)))))), ydp1)))));70.7555082383026;
+
+7;Maximum(Power(Sinh(Minus(yd2, qx1)), Norm(Exp(Tanh(Sinh(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Minus(xdp1, qy1)))))))))), ydp1);70.0;
+

@@ -1,0 +1,8 @@
+Sinh(Norm(qy2)); 7.624995475169311
+Sinh(Norm(qy2)); 7.624995475169311
+Sinh(Norm(qy2)); 7.624995475169311
+Sinh(Norm(qy2)); 7.624995475169311
+Sinh(Norm(qy2)); 7.624995475169311
+Sinh(Norm(qy2)); 7.624995475169311
+Maximum(Csch(Plus(Sin(Exp(Cos(qy2))), Abs(Cos(Sqrt(ydp1))))), Logn(Cos(Norm(Cot(Divide(qd2, t2)))))); 7.751507380667239
+Maximum(Csch(Plus(Sin(Exp(Cos(qy2))), Abs(Cos(Sqrt(ydp1))))), Logn(Cos(Norm(Cot(Divide(qd2, t2)))))); 7.751507380667239

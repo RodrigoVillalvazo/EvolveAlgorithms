@@ -1,0 +1,20 @@
+0;Tan(qx1);72.00005216248302;
+
+1;Coth(Sech(Csch(ydp2)));65.599;
+
+2;Real(ydp1);72.00006268847349;
+
+3;Maximum(Vy2, qx2);72.00005533954167;
+
+4;Asin(Sinh(Real(Sqr(Maximum(Plus(Sqrt(Divide(ydp2, Vx2)), Cos(Tan(Vx1))), Divide(Atan2r(Divide(ydp1, Vx2), Sech(Vx2)), Abs(Minus(qy1, td))))))));72.27000000000001;
+
+5;Tanh(Sqrt(Cosh(t1)));72.00004916449893;
+
+6;Sin(yd1);72.00005454551813;
+
+7;Cos(qx1);72.00005073236642;
+
+8;Cot(yd2);72.00004354627717;
+
+9;Tanh(qy2);72.00005490666108;
+

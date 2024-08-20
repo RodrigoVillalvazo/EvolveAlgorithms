@@ -1,0 +1,2 @@
+Logn(Atan2r(Atanr(t1), Cosh(Vy2))); 70.0
+Logn(Atan2r(Atanr(t1), Cosh(Vy2))); 70.0

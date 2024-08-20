@@ -1,13 +1,15 @@
 import numpy as np
 from libs.Math import Plus, Times, Norm, Minus, Cos, Sin
-from libs.Model import ModelKaF1TestRobot1, ModelKaF1TestRobot2
+from libs.Model import IndividualTest
 def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     #print(str(ind))
     #Numero de robots
     n=2
     rCen=0.1
     phi=3.1415/18
-    dt=0.001
+    dt=0.01#Paso de derivación
+    aux1=0
+    aux2=0
     #Vector direccion
     theta=np.arange(0,2*np.pi,2*np.pi/n)
     Vdir1=[np.cos(theta[0]),np.sin(theta[0])]
@@ -18,62 +20,39 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     #cd=DaisyvirtualModel(Cd,dt)
     #cd=GeronovirtualModel(Cd,dt)
     PdR1=Plus(cd,Times(rCen,Vdir1))
-    PdR2=Plus(cd,Times(rCen,Vdir2))     
+    PdR2=Plus(cd,Times(rCen,Vdir2))   
+    tR1saved=0
+    tR2saved=0
+    tR1=0
+    tR2=0  
     r=[rRob1,rRob2]#Radio de los robots y obstaculos
     pos=[Rob1,Rob2,PdR1,PdR2]#Vector de Condiciones iniciales
     pd=[pos[2],pos[3]]#Vector de posiciones deseadas
-    tR1=0
-    tR2=0
-    aux1=1
-    aux2=1
-    aux10=[]
-    vxR1=[]#list
-    vxR2=[]#list
-    vyR1=[]#list
-    vyR2=[]#list
-    VxR1=[]#list
-    VxR2=[]#list
-    VyR1=[]#list
-    VyR2=[]#list
-    dsR1a=[]#list
-    dsR2a=[]#list
-    doR1a=[]#list
-    doR2a=[]#list
-    dR1a=[]#list
-    dR2a=[]#list
-    drR1a=[]#list
-    drR2a=[]#list
-    Try1=[]
-    Try2=[]
-    Try3=[] 
-    Try4=[]
-    cdxa=[]
-    cdya=[]
-    vrR1=[]
-    drR1=[]
-    drR2=[]
-    drR3=[]
-    tR1saved=0.0
-    tR2saved=0.0
-    tsR1=[]#list
-    tsR2=[]#list
-    vrR2=[]#list
     r1=r[0]
     r2=r[1]
-
-    xo1=[0]
-    yo1=[0]
-    xo2=[0]
-    yo2=[0]
-
-    xRob1=[0.0]
-    yRob1=[0.0]
-    xRob2=[0.0]
-    yRob2=[0.0]
-
-    tR1=tR1+dt
-    tR2=tR2+dt
-
+    qR1=[]
+    qR2=[]
+    vrR1=[]
+    tsR1=[]
+    tsR2=[]
+    Try1=[]
+    Try2=[]
+    Try3=[]
+    Try4=[]
+    dsR1a=[]
+    dsR2a=[]
+    doR1a=[]
+    doR2a=[]
+    dR2a=[]
+    dR1a=[]
+    drR1a=[]
+    drR2a=[]
+    vxR1=[]
+    vyR1=[]
+    vxR2=[]
+    vyR2=[]
+    cdxa=[]
+    cdya=[]    
     #Posicion del obstaculo
     posR1x=float(eval(str(pos[0][0]).replace('"', '').replace("'", '')))#float
     posR1y=float(eval(str(pos[0][1]).replace('"', '').replace("'", '')))#float
@@ -96,8 +75,8 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     tR2=u[11]
 
     #distancia inicial del robot al objetivo
-    qR1=list([posR1x,posR1y])
-    qR2=list([posR2x,posR2y])
+    qR1=[posR1x,posR1y]
+    qR2=[posR2x,posR2y]
 
     doR1=Norm(Minus(qR1,pdR1))
     dR1=doR1
@@ -115,28 +94,21 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     i=1
     #Obtener velocidades
     radiO=(r1+r2)+ep
-    vR1=ModelKaF1TestRobot1(u,ind,r,u0R1)
-    vR2=ModelKaF1TestRobot2(u,ind,r,u0R2)
-
-    #vR1=[vR1]
-    #vR2=[vR2]
+    vR1,vR2=IndividualTest(u,ind,r,u0R1)
+    #vR1=ModelKaF1TestRobot1(u,ind,r,u0R1)
+    #vR2=ModelKaF1TestRobot2(u,ind,r,u0R2)
 
     qR1=[qR1]
-    qR2=[qR2]
-     
-    while (tR1<=tf)and(tR2<=tf)and(dsR1>radiO)and(dsR2>radiO):
-        if(dsR1<radiO):
-            print(dsR1)
-        if(dsR2<radiO):
-            print(dsR2)
+    qR2=[qR2]   
 
-        vR1.append(vR1)
-        vR2.append(vR2)
+    while (tR1<=tf)and(tR2<=tf)and(dsR1>radiO)and(dsR2>radiO):
+
         #auxz=Times(dt,vR1[i-1])
 
-        
-        qR1.append(Plus(Times(dt,vR1[i-1]),qR1[i-1]))#actualizar posiciones del Robot 1
-        qR2.append(Plus(Times(dt,vR2[i-1]),qR2[i-1]))
+        qR1.insert(i,Plus(Times(dt,vR1[i-1]),qR1[i-1]))
+        qR2.insert(i,Plus(Times(dt,vR2[i-1]),qR2[i-1]))
+        #qR1.append(Plus(Times(dt,vR1[i-1]),qR1[i-1]))#actualizar posiciones del Robot 1
+        #qR2.append(Plus(Times(dt,vR2[i-1]),qR2[i-1]))
 
 
         drR1=drR1+Norm(Minus(qR1[i],qR1[i-1]))#distancia recorrida
@@ -170,10 +142,13 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
         #cd=GeronovirtualModel(Cd,tR1)
         PdR1=Plus(cd,Times(rCen,Vdir1))
         PdR2=Plus(cd,Times(rCen,Vdir2))    
-        vR1[i]=ModelKaF1TestRobot1(u,ind,r,u0R1)                 #obtener una nueva velocidad del robot 1
-        VxR1,VyR1=vR1[i]
-        vR2[i]=ModelKaF1TestRobot2(u,ind,r,u0R2)                 #obtener una nueva velocidad del robot 2
-        VxR2,VyR2=vR2[i]
+        VR1,VR2=IndividualTest(u,ind,r,u0R1)
+        #vR1[i]=ModelKaF1TestRobot1(u,ind,r,u0R1)                 #obtener una nueva velocidad del robot 1
+        VxR1,VyR1=[VR1[0][0],VR1[0][1]]
+        #vR2[i]=ModelKaF1TestRobot2(u,ind,r,u0R2)                 #obtener una nueva velocidad del robot 2
+        VxR2,VyR2=[VR2[0][0],VR2[0][1]]
+        vR1.insert(i,VR1[0])
+        vR2.insert(i,VR2[0])
 
         u[6]=VxR1
         u[7]=VyR1
@@ -181,20 +156,15 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
         u[9]=VyR2
         u[4]=PdR1
         u[5]=PdR2
-        vrR1.append(vR1[i])
+        vrR1.append(vR1)
         tsR1.append(tR1)
         tsR2.append(tR2)
-
         Try1.append(qR1[i-1][0])#s.try
         Try2.append(qR1[i-1][1])
-        
         Try3.append(qR2[i-1][0])
         Try4.append(qR2[i-1][1])
-        
-        
         dsR1a.append(dsR1)
         dsR2a.append(dsR2)
-
         doR1a.append(doR1)
         doR2a.append(doR2)
         dR1a.append(dR1)
@@ -205,8 +175,8 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
         vxR2.append(VxR2)
         vyR1.append(VyR1)
         vyR2.append(VyR2)
-        cdxa.append(cd[0])
-        cdya.append(cd[1])
+        cdxa.insert(i,cd[0])
+        cdya.insert(i,cd[1])
         #Seccion de banderas
         i=i+1
         if(dR1<0.02)and((VxR1<0.001)and(VyR1<0.001)and(aux1==1)):
@@ -223,7 +193,7 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
         u[15]=tR2
 
         #archivo.write(str(xo1[i-1])+","+str(yo1[i-1])+","+str(v[i-1][0])+","+str(v[i-1][1])+","+str(t)+","+str(dr)+","+str(do)+","+str(d)+","+str(ds)+","+str(xc1)+","+str(yc1)+","+str(p[i-1])+"\n")
-        s=[tR1saved,tR2saved,Try1,vxR1,vyR1,tsR1,drR1a,doR1a,dR1a,0,Try2,Try3,Try4,dsR1a,dR2a,vrR2,doR2a,drR2a,dsR2a,tsR2,dsR1,dsR2,vxR2,vyR2,0,0,0,0,0,0,0,0,cdxa,cdya]
+        s=[tR1saved,tR2saved,Try1,vxR1,vyR1,tsR1,drR1a,doR1a,dR1a,0,Try2,Try3,Try4,dsR1a,dR2a,0,doR2a,drR2a,dsR2a,tsR2,dsR1,dsR2,vxR2,vyR2,0,0,0,0,0,0,0,0,cdxa,cdya]
         pdT=[PdR1,PdR2]
         vect=[r,pd,pdT]
     return s, vect

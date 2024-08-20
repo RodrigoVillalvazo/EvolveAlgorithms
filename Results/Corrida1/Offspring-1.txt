@@ -1,0 +1,16 @@
+0;Sinh(qy2);7.624995475169311;
+
+1;Sinh(Norm(Norm(qy2)));70.0;
+
+2;Sinh(Norm(qy2));70.0;
+
+3;Sinh(Norm(qy2));70.0;
+
+4;Sinh(Norm(qy2));70.0;
+
+5;Sinh(Norm(qy2));70.0;
+
+6;Sinh(Norm(qy2));7.624995475169311;
+
+7;Sinh(Norm(qy2));7.624995475169311;
+

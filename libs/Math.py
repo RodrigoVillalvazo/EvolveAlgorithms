@@ -122,8 +122,12 @@ def Divide(x, y):
 def Maximum(x, y):
     if isinstance(x, str):
         x = Transltr(x)
+    else:
+        x=Real(x)
     if isinstance(y, str):
         y = Transltr(y)
+    else:
+        y= Real(y)
     if isinstance(x, list) or isinstance(y, list):
         if isinstance(x, (float, int)):
             x = [x] * len(y)
@@ -136,8 +140,12 @@ def Maximum(x, y):
 def Minimum(x, y):
     if isinstance(x, str):
         x = Transltr(x)
+    else:
+        x=Real(x)
     if isinstance(y, str):
         y = Transltr(y)
+    else:
+        y= Real(y)
     if isinstance(x, list) or isinstance(y, list):
         if isinstance(x, (float, int)):
             x = [x] * len(y)
@@ -183,8 +191,8 @@ def Sqr(z):
 def Logn(z):
     if isinstance(z, str):
         z = Transltr(z)
-    if isinstance(z, complex):
-        z=Real(z)
+#    if isinstance(z, complex):
+#        z=Real(z)
     #if isinstance(z, complex):
     #    try:
     #        return np.real(ctm.log(z))
@@ -292,8 +300,8 @@ def Sign(z):
 def Cos(z):
     if isinstance(z, str):
         z = Transltr(z)
-    if isinstance(z, complex):
-        z=Real(z)
+    #if isinstance(z, complex):
+    #    z=Real(z)
     #if isinstance(z, (float,int)):
     #    try:
     #        return np.cos(z)
@@ -391,20 +399,25 @@ def Acos(z):
 def Abs(z):
     if isinstance(z, str):
         z = Transltr(z)
-    if isinstance(z, complex):
-        z=Real(z)
+    #if isinstance(z, complex):
+    #    z=Real(z)
     #if isinstance(z, complex):
     #    return abs(z)
     return [abs(a) for a in z] if isinstance(z, list) else abs(z)
 
 def Real(z):
     try:
-        z=all(z)
+        c=[np.real(a) for a in z]
     except:
-        z=z
-    if isinstance(z, str):
-        z = Transltr(z)
-    return [np.real(a) for a in z] if isinstance(z, list) else np.real(z)
+        c=np.real(z)
+    return c
+    #try:
+    #    z=all(z)
+    #except:
+    #    z=z
+    #if isinstance(z, str):
+    #    z = Transltr(z)
+    #return [np.real(a) for a in z] if isinstance(z, list) else np.real(z)
 
 def Atanr(z):
     if isinstance(z, str):
@@ -420,14 +433,10 @@ def Atanr(z):
 
 def Norm(z):
     if isinstance(z, str):
-        z = Transltr(z)
-    if isinstance(z, list):
-        z = np.array(z)
-    if isinstance(z, complex):
-        try:
-            z=Real(z)    
-        except:
-            z.all()
+        a = Transltr(z)
+    else:
+        a = np.linalg.norm(z)
     #if isinstance(z, complex):
     #    return np.real(np.linalg.norm(z))
-    return [float(np.linalg.norm(z)) for a in z] if isinstance(z, list) else np.linalg.norm(z)
+    #return [float(np.linalg.norm(z)) for a in z] if isinstance(z, list) else np.linalg.norm(z)
+    return a

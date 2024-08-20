@@ -1,0 +1,18 @@
+0;Minus(Norm(Norm(qx2)), Cot(Tan(Coth(td))));72.0000556699591;
+
+1;Minus(qx2, Cos(t1));69.8019018529013;
+
+2;Minus(Sinh(Csch(Times(Minimum(qy1, xdp1), Plus(ydp2, Vx1)))), t1);65.599;
+
+3;Minus(Norm(qx2), Maximum(Times(Exp(Csc(qx1)), Minimum(Sech(qx1), Cot(Vy1))), Abs(Sin(Minimum(Vy1, qx2)))));70.0;
+
+4;Minus(Norm(qx2), Cos(t1));71.00191936361657;
+
+5;Minus(Norm(qx2), Cos(t1));71.00191936361657;
+
+6;Minus(qx2, Cos(t1));69.60190100257228;
+
+7;Minus(Norm(Norm(qx2)), Cos(t1));70.60191259854122;
+
+8;Minus(Norm(qx2), Divide(Cot(Atanr(Atan2r(Csc(Tan(qx1)), Power(Csch(xdp1), Times(t2, t1))))), Cosh(Acos(Coth(Times(Times(qx1, yd1), Abs(t1)))))));70.0;
+

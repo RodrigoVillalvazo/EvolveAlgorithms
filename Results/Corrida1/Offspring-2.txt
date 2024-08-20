@@ -1,0 +1,16 @@
+0;Sinh(Norm(qy2));7.624995475169311;
+
+1;Tanh(Divide(Asin(Csc(Maximum(Acos(Exp(yd1)), Sin(Power(Vx2, q2))))), Tan(Real(Cot(Cosh(Sec(qd2)))))));70.0;
+
+2;Sinh(qy2);7.624995475169311;
+
+3;Sinh(Norm(qy2));7.624995475169311;
+
+4;Sinh(Norm(Norm(qy2)));7.624995475169311;
+
+5;Sinh(Cot(Cos(Norm(Csch(Cot(Abs(Norm(Asin(qd2)))))))));72.27000000000001;
+
+6;Sinh(Norm(qy2));7.624995475169311;
+
+7;Sinh(Norm(qy2));7.624995475169311;
+

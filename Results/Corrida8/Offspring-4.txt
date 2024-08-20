@@ -1,0 +1,16 @@
+0;Norm(Logn(Sin(Divide(xd1, Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Real(Acos(Minus(Logn(Sin(Divide(xd1, Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Real(Acos(Minus(xdp1, qy1)))))))), ydp1)))), qy1)))))))), ydp1)))));72.0537768555827;
+
+1;Norm(xdp1);72.00006268847349;
+
+2;Norm(Logn(Sin(Divide(xd1, Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Real(Acos(Sin(Divide(xd1, Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Real(Acos(Minus(xdp1, qy1)))))))), ydp1)))))))))), ydp1)))));72.0537768555827;
+
+3;Norm(Logn(Minus(xdp1, Exp(Times(Sinh(Acos(Acos(Cot(Sinh(Plus(Exp(Cos(Sec(qy1))), Cosh(Divide(Minimum(xdp1, ydp2), Minus(qy2, xdp2))))))))), Cot(Tanh(Coth(Atan2r(Tan(Maximum(Minimum(Cot(Tan(qy1)), Sin(Plus(yd1, xd2))), Tan(Real(Acos(Vx2))))), Atan2r(Sin(Tanh(Cot(Divide(Vy2, Vx1)))), Sqr(Sin(Sinh(Cos(ydp2))))))))))))));72.27000000000001;
+
+4;Norm(Logn(Sin(Divide(xd1, Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), Tan(Logn(Minimum(Power(xd2, yd2), Sin(Sinh(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Cos(t1))))))))))))), Maximum(Maximum(qx2, xd1), ydp1)))), Minimum(Maximum(qx2, xd1), Real(Acos(Minus(xdp1, qy1)))))))), ydp1)))));70.0;
+
+5;Norm(Logn(Csc(Atan2r(Sinh(Sin(Sin(Maximum(Cot(Asin(Sqrt(Divide(Atan2r(qy1, xdp1), Times(xdp1, yd2))))), Asin(Minus(Power(Real(Minus(yd1, ydp2)), Cot(Tanh(qx1))), Coth(Logn(Minus(t2, yd2))))))))), Cos(Norm(Sqr(Asin(Abs(Sqr(Exp(Sech(Real(t1)))))))))))));72.27000000000001;
+
+6;Norm(Logn(Sin(Divide(xd1, Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), Tan(Logn(Minimum(Power(xd2, yd2), Sin(Sinh(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Cos(t1))))))))))))), Maximum(Maximum(qx2, xd1), ydp1))))))), ydp1)))));70.0;
+
+7;Norm(Logn(Sin(Real(Acos(Minus(xdp1, qy1))))));72.0742815621816;
+

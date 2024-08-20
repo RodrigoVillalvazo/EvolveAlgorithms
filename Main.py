@@ -28,7 +28,7 @@ from deap import gp
 from deap import creator
 from deap import base
 
-N=0
+N=10
 CPU_count = MP.cpu_count()-1
 start = time.time()
 #   Algoritmo de Programacion Genetica para evolucionar
@@ -45,7 +45,7 @@ td=4.0
 #numero de generaciones
 Ngen=10#increase Factor
 #numero de poblacion
-Npop=10#Decrease factor
+Npop=100#Decrease factor
 #numero de condiciones iniciales disponibles
 Ncon=10
 #condicionador, el factor debe ser menor al numero de condiciones
@@ -106,6 +106,7 @@ def MultProcess(ind,td,Npros,Ncon):
         AlgorithmMod.update_msg(Values, 1)
         AlgorithmMod.update_msg(str(ind), 1)
         MYFitness=np.mean([mfitness])
+    #AlgorithmMod.update_msg("Individuo Evaluado:" + str(ind), 1)
     lastTime=time.time()
     totalTime=lastTime-firstTime
     FILEGTIME.write(f"First Time: {firstTime};"+f" Last Time: {lastTime};"+f" Total Time(s): {totalTime};")
@@ -116,7 +117,7 @@ def MultProcess(ind,td,Npros,Ncon):
 
 
 toolbox = base.Toolbox()
-pset = gp.PrimitiveSetTyped("MAIN",itertools.repeat(float,28),float)
+pset = gp.PrimitiveSetTyped("MAIN",itertools.repeat(float,19),float)
 #time.sleep(0.01)
 #history = tools.History()
 creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
@@ -166,65 +167,65 @@ pset.addPrimitive(Abs,[float],float)#absoluto
 pset.addPrimitive(Real,[float],float)#real
 pset.addPrimitive(Atanr,[float],float)#arcotangente real
 #Terminales
-pset.addTerminal("q1",str)#0
-pset.addTerminal("q2",str)#1
-pset.addTerminal("qx2",str)#2
-pset.addTerminal("qy2",str)#3
-pset.addTerminal("qx1",str)#4
-pset.addTerminal("qy1",str)#5
-pset.addTerminal("xd1",str)#6
-pset.addTerminal("xdp1",str)#7
-pset.addTerminal("yd1",str)#8
-pset.addTerminal("ydp1",str)#9
-pset.addTerminal("xd2",str)#10
-pset.addTerminal("xdp2",str)#11
-pset.addTerminal("yd2",str)#12
-pset.addTerminal("ydp2",str)#13
-pset.addTerminal("Vx1",str)#14
-pset.addTerminal("Vy1",str)#15
-pset.addTerminal("Vx2",str)#16
-pset.addTerminal("Vy2",str)#17
-pset.addTerminal("qd1",str)#18
-pset.addTerminal("qd2",str)#19
-pset.addTerminal("V1",str)#20
-pset.addTerminal("V2",str)#21
-pset.addTerminal("t1",str)#22   
-pset.addTerminal("t2",str)#23
-pset.addTerminal("tR",str)#24
-pset.addTerminal("td",str)#25
-pset.addTerminal("tdR",str)#26
-pset.addTerminal("OrR1R1",str)#27
-pset.addTerminal("OrR2R1",str)#28
+pset.addTerminal("qx2",str)#0
+pset.addTerminal("qy2",str)#1
+pset.addTerminal("qx1",str)#2
+pset.addTerminal("qy1",str)#3
+pset.addTerminal("xd1",str)#4
+pset.addTerminal("xdp1",str)#5
+pset.addTerminal("yd1",str)#6
+pset.addTerminal("ydp1",str)#7
+pset.addTerminal("xd2",str)#8
+pset.addTerminal("xdp2",str)#9
+pset.addTerminal("yd2",str)#10
+pset.addTerminal("ydp2",str)#11
+pset.addTerminal("Vx1",str)#12
+pset.addTerminal("Vy1",str)#13
+pset.addTerminal("Vx2",str)#14
+pset.addTerminal("Vy2",str)#15
+pset.addTerminal("t1",str)#16   
+pset.addTerminal("t2",str)#17
+pset.addTerminal("td",str)#18
+pset.addTerminal("OrR1R1",str)#19
+pset.addTerminal("OrR2R1",str)#20
+#pset.addTerminal("q1",str)#21
+#pset.addTerminal("q2",str)#22
+#pset.addTerminal("qd1",str)#23
+#pset.addTerminal("qd2",str)#24
+#pset.addTerminal("V1",str)#25
+#pset.addTerminal("V2",str)#26
+#pset.addTerminal("tR",str)#27
+#pset.addTerminal("tdR",str)#28
 """Rename the Args to our variables names"""
-pset.renameArguments(ARG0='q1')
-pset.renameArguments(ARG1='q2')
-pset.renameArguments(ARG2='qx2')
-pset.renameArguments(ARG3='qy2')
-pset.renameArguments(ARG4='qx1')
-pset.renameArguments(ARG5='qy1')
-pset.renameArguments(ARG6='xd1')
-pset.renameArguments(ARG7='xdp1')
-pset.renameArguments(ARG8='yd1')
-pset.renameArguments(ARG9='ydp1')
-pset.renameArguments(ARG10='xd2')
-pset.renameArguments(ARG11='xdp2')
-pset.renameArguments(ARG12='yd2')
-pset.renameArguments(ARG13='ydp2')
-pset.renameArguments(ARG14='Vx1')
-pset.renameArguments(ARG15='Vy1')
-pset.renameArguments(ARG16='Vx2')
-pset.renameArguments(ARG17='Vy2')
-pset.renameArguments(ARG18='qd1')
-pset.renameArguments(ARG19='qd2')
-pset.renameArguments(ARG20='V1')
-pset.renameArguments(ARG21='V2')
-pset.renameArguments(ARG22='t1')
-pset.renameArguments(ARG23='t2')
-pset.renameArguments(ARG24='tR')
-pset.renameArguments(ARG25='td')
-pset.renameArguments(ARG26='tdR')
-pset.renameArguments(ARG27='OrR1R1')
-pset.renameArguments(ARG28='OrR2R1')
+pset.renameArguments(ARG0='qx2')
+pset.renameArguments(ARG1='qy2')
+pset.renameArguments(ARG2='qx1')
+pset.renameArguments(ARG3='qy1')
+pset.renameArguments(ARG4='xd1')
+pset.renameArguments(ARG5='xdp1')
+pset.renameArguments(ARG6='yd1')
+pset.renameArguments(ARG7='ydp1')
+pset.renameArguments(ARG8='xd2')
+pset.renameArguments(ARG9='xdp2')
+pset.renameArguments(ARG10='yd2')
+pset.renameArguments(ARG11='ydp2')
+pset.renameArguments(ARG12='Vx1')
+pset.renameArguments(ARG13='Vy1')
+pset.renameArguments(ARG14='Vx2')
+pset.renameArguments(ARG15='Vy2')
+pset.renameArguments(ARG16='t1')
+pset.renameArguments(ARG17='t2')
+pset.renameArguments(ARG18='td')
+pset.renameArguments(ARG19='OrR1R1')
+pset.renameArguments(ARG20='OrR2R1')
+#pset.renameArguments(ARG21='q1')
+#pset.renameArguments(ARG22='q2')
+#pset.renameArguments(ARG23='qd1')
+#pset.renameArguments(ARG24='qd2')
+#pset.renameArguments(ARG25='V1')
+#pset.renameArguments(ARG26='V2')
+#pset.renameArguments(ARG27='tR')
+#pset.renameArguments(ARG28='tdR')
 """Get the indiviual expresion"""
 expr = toolbox.individual()
 del pset
@@ -232,8 +233,22 @@ gc.collect()
 if __name__=="__main__":
     MP.freeze_support()
     #Directorio donde se almacenaran todos los datos
-    path =str('Corrida'+str(run)+'/')
+    pathA =str('Results/')
+    pathB =str('Corrida'+str(run)+'/')
+    path=pathA+pathB
     #Instrucciones para crear el directorio
+    try:
+        #Se intenta crear el directorio
+        #Si no hay ninguno de nombre repetido se crea una nueva carpeta
+        os.mkdir(pathA)
+        #imprimimos un texto al usuario si se creo la carpeta
+        sys.stdout.write("\nCreacion completa del directorio: %s\n"%pathA)
+        sys.stdout.flush()
+        #Accedemos a la simulacion y parametros evolutivas
+    except OSError:
+        gc.collect()
+        #Si la carpeta ya existe se muestra al usuario un texto avisando que la carpeta sera sobreescribida
+        sys.stdout.flush()   
     try:
         #Se intenta crear el directorio
         #Si no hay ninguno de nombre repetido se crea una nueva carpeta
@@ -256,8 +271,9 @@ if __name__=="__main__":
     mstats.register("max", np.max)
     pop = toolbox.population(n=Npop)
     hof = tools.HallOfFame(1)
-    newCheckP=str('checkpoint'+str(run)+'.pkl')
-    CheckP=AlgorithmMod.CheckPoint(newCheckP)
+    chk_name=str('checkpoint'+str(run)+'.pkl')
+    newCheckP=path+chk_name
+    CheckP=AlgorithmMod.CheckPoint(newCheckP,path,chk_name)
     try:
         pop, log = AlgorithmMod.eaSimpleModWithElitism(path,newCheckP,pop, toolbox, 0.80, 0.20, Ngen, run, 1,stats=mstats,
                                         halloffame=hof,checkpoint=CheckP,verbose=True)
@@ -300,7 +316,7 @@ if __name__=="__main__":
         sys.stdout.write("\nTiempo transcurrido: %f dias\n"%(finaltime/86400))
     #Finalizamos el programa
     input("Press Enter to continue...")
-    os.kill(os.getpid(), MP.signal.SIGTERM)
+    os.kill(os.getpid(), signal.SIGTERM)
 """
 Create the fitness class
 :param ind => Individual from DEAP toolbox

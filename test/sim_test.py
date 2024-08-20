@@ -5,7 +5,6 @@ import math
 import matplotlib.pyplot as plt
 import matplotlib.animation as manimation
 import os, sys
-
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
@@ -14,7 +13,7 @@ for i in range (10):
     FileD=open('Training.txt')#Direccion contenedora del archivo de condiciones iniciales
     td=4.0
     index=i
-    ind='Sin(0)'
+    ind='Minimum(Vy1, qx1)'
     reader=csv.reader(FileD, delimiter=' ',skipinitialspace=True)#Leemos todo el documento
     lineData = list()#variable para las lineas
     cols=next(reader)#variable para las columnas
@@ -67,7 +66,7 @@ for i in range (10):
     Ext1=(timeSavedR1==0)and(ErrorTiempoR1>tolerance)
     Ext2=(timeSavedR2==0)and(ErrorTiempoR2>tolerance)
 
-    fitness=(ErrorPosRob1**2)+(ErrorPosRob2**2)+(ErrorTiempoR1**2)+(ErrorTiempoR2**2)#Fitness error cuadratico medio
+    fitness=np.sqrt((ErrorPosRob1**2)+(ErrorPosRob2**2)+(ErrorTiempoR1**2)+(ErrorTiempoR2**2))#Fitness error cuadratico medio
     
     if (math.isnan(fitness) or math.isinf(fitness)):#Penalizamos si el fitness es infinito o si no es un numero
         fitness=50.0
@@ -78,7 +77,8 @@ for i in range (10):
     elif((RuntimeWarning==True)or(RuntimeError==True)or(ValueError==True)):
         fitness=fitness+60.0
     else:
-        print(fitness)#Fitness error cuadratico medio     
+        fitness=fitness+0.00001#Fitness error cuadratico medio   
+    print(fitness)  
     '''Create the path frame'''
     fig=plt.figure()
     plt.plot(Try1,Try2,Try3,Try4)

@@ -1,0 +1,12 @@
+0;Coth(Sec(Sec(Real(Atanr(t1)))));72.02567206387502;
+
+1;Logn(Atan2r(Vy1, Cosh(Vy2)));70.0;
+
+2;Sech(Maximum(Minimum(t1, Vy2), Exp(yd1)));72.00005595132953;
+
+3;Cosh(Tanh(xdp2));72.00004915281;
+
+4;Logn(Atan2r(Atanr(t1), Cosh(Vy2)));70.0;
+
+5;Cosh(Tanh(Maximum(Minimum(t1, Vy2), Exp(yd1))));72.00004566574535;
+

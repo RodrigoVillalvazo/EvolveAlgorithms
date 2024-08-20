@@ -1,0 +1,14 @@
+0;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), xd1))), Maximum(Csc(Cosh(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Cot(qy1))))))), ydp1)))));70.0;
+
+1;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), Tan(Logn(Minimum(Power(xd2, yd2), Sin(Sinh(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Cos(t1))))))))))))), Maximum(Csc(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Cot(qy1))))), ydp1)))));70.0;
+
+2;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), xd1))), Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), Tan(Logn(Minimum(Power(xd2, yd2), Sin(Sinh(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Cos(t1)))))))))))))), Cot(qy1)))))), ydp1)))));70.0;
+
+3;Norm(Logn(Sin(Divide(xd1, Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Real(Acos(Minus(xdp1, qy1)))))))), ydp1)))));70.0;
+
+4;Norm(Logn(Sin(Divide(Cosh(Sec(Maximum(qx1, ydp2))), Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Atan2r(Sin(Abs(Abs(Norm(Plus(Cot(Acos(Abs(Atanr(Tan(Vx1))))), Divide(Atanr(Sech(Atanr(Norm(Vx1)))), Exp(Abs(Norm(Minimum(ydp1, Vy1)))))))))), Power(Times(Minus(Logn(Atan2r(Logn(Minimum(Power(Logn(Power(Vx2, qx1)), Sinh(Norm(qx1))), Abs(Atanr(Atanr(qy1))))), Csch(Csch(Sqr(Logn(Norm(xdp2))))))), Abs(Minus(Power(Tan(Sin(Sin(Sech(ydp1)))), Norm(Sqr(Plus(Tan(t1), Sin(xd2))))), Acos(Sec(Sinh(Exp(Power(xd2, Vy1)))))))), Asin(Coth(Power(Real(Cos(Sec(Atanr(Sech(yd1))))), Sech(Minus(Norm(Tanh(Sec(Vy1))), Real(Atan2r(Sqr(Tan(Logn(Minimum(Power(xd2, yd2), Sin(Sinh(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Cos(t1))))))))))), Atanr(xdp1))))))))), Logn(Abs(Cot(Sec(Abs(Norm(Sqrt(Acos(Csch(xd2))))))))))))), Minimum(Maximum(qx2, xd1), Cot(qy1)))))), Sin(Acos(Maximum(Asin(Csc(Asin(yd2))), Sech(Plus(Tanh(xdp2), Coth(Real(Coth(Sech(Real(Atanr(Norm(Acos(xdp1))))))))))))))))));70.0;
+
+5;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), xd1))), Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Cot(qy1)))))), ydp1)))));70.0;
+
+6;Norm(Logn(Sin(Divide(Cosh(Tanh(Times(Csch(Minus(Minus(Sin(Vy2), Asin(xd1)), Abs(Csc(t2)))), Tan(Logn(Minimum(Power(xd2, yd2), Sin(Sinh(Times(Cosh(Abs(Tan(Logn(ydp2)))), Asin(Times(Acos(Times(ydp2, ydp1)), Exp(Cos(t1))))))))))))), Maximum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Csc(Cosh(Sqr(Minus(Exp(Tanh(Vy2)), Minimum(Maximum(qx2, xd1), Cot(qy1)))))), Cot(qy1)))))), ydp1)))));70.0;
+

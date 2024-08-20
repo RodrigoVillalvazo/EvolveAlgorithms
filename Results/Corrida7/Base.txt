@@ -1,0 +1,2 @@
+0;Atan2r(Divide(Atan2r(Exp(Sinh(Divide(Atanr(Atanr(Sin(Cot(qy2)))), Power(Sqrt(Tanh(Csch(Vy1))), Sech(Maximum(Tan(Vy2), Exp(Vy2))))))), Exp(Csc(Sech(Sinh(Atan2r(Times(Tanh(t1), Cot(xdp1)), Atanr(Sqr(qx1)))))))), Sinh(Abs(Sqr(Cosh(Coth(Cosh(Sqrt(Real(Vy1))))))))), Sqrt(Acos(Abs(Asin(Sec(Sech(Sqr(Sinh(Real(xdp2))))))))));72.27000000000001;
+

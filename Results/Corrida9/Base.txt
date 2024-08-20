@@ -1,0 +1,22 @@
+0;Exp(ydp2);72.00004915281;
+
+0;Asin(Logn(Sinh(Csch(ydp2))));72.00004499396435;
+
+1;Sinh(Divide(Divide(Abs(Sinh(qx2)), Minus(Norm(qy1), Real(Vx2))), Sqr(Exp(Tan(yd2)))));72.00006082884111;
+
+2;Coth(Maximum(Sec(Plus(Times(xd1, t1), Maximum(Vx1, td))), Logn(Atanr(Atanr(qy1)))));71.00247621596677;
+
+3;Cosh(Exp(Minus(Minimum(Tanh(Logn(Sec(Sqrt(Sec(qy2))))), Sech(Sqr(Cot(Sech(Sin(qy1)))))), Minus(Acos(Sqr(Tanh(Cot(Tanh(yd2))))), Csch(Minimum(Asin(Exp(Asin(yd1))), Csc(Sin(Sin(t2)))))))));72.00004343536355;
+
+4;Plus(Maximum(Sqr(Real(Sec(Acos(qy1)))), Sin(Atan2r(Sqr(Divide(Vy1, qy2)), Real(Atan2r(xdp2, td))))), Tan(Atanr(Exp(Plus(Cos(Vy2), Csch(td))))));66391.87890977746;
+
+5;Asin(Sech(xdp2));72.00004499396435;
+
+6;Sinh(Cot(Cosh(Times(Abs(Sec(Sec(ydp1))), Cosh(Sinh(Logn(qx2)))))));8.250860872206306e+130;
+
+7;Sec(t2);68.0653172738617;
+
+8;Minus(Acos(Sqr(yd2)), Real(xdp2));72.00004663998536;
+
+9;Asin(Divide(Real(t1), Sec(qx1)));72.00004437771854;
+
