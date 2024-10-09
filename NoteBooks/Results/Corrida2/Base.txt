@@ -1,0 +1,10 @@
+0;Maximum(xd2, Minimum(yd2, td));304.0068435967553;
+
+1;Sin(Coth(Acos(Csch(Tanh(qy1)))));304.0068435967553;
+
+2;Sinh(Sinh(Tanh(Divide(Norm(Minus(ydp2, Vy2)), Asin(Sqr(q1))))));304.0068435967553;
+
+3;Divide(Csch(Sin(Sec(Plus(Csch(ydp2), Tan(xd1))))), Csch(Times(Real(Plus(Abs(tR), Sin(xd1))), Sinh(Minus(Sec(ydp2), Tan(yd2))))));304.0068435967553;
+
+4;Sinh(xd2);304.0068435967553;
+
