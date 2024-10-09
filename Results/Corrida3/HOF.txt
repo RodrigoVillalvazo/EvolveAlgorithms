@@ -1,8 +1,0 @@
-Minus(Norm(qx2), Cos(t1)); 69.201877541972
-Minus(Norm(qx2), Cos(t1)); 69.201877541972
-Minus(Norm(qx2), Cos(t1)); 69.201877541972
-Minus(Norm(qx2), Cos(t1)); 69.201877541972
-Minus(Norm(qx2), Cos(t1)); 69.201877541972
-Minus(Norm(qx2), Cos(t1)); 69.201877541972
-Minus(Sinh(Csch(Times(Minimum(qy1, xdp1), Plus(ydp2, Vx1)))), t1); 65.599
-Minus(Sinh(Csch(Times(Minimum(qy1, xdp1), Plus(ydp2, Vx1)))), t1); 65.599

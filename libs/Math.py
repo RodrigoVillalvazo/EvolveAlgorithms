@@ -101,7 +101,10 @@ def Power(x, y):
             x = [x] * len(y)
         if isinstance(y, (float, int)):
             y = [y] * len(x)
-        return [a ** b for a, b in zip(x, y)]
+        try:
+            return [a ** b for a, b in zip(Real(x), Real(y))]
+        except:
+            return nan
     else:
         return x ** y
 
@@ -153,7 +156,10 @@ def Minimum(x, y):
             y = [y] * len(x)
         return min([min(a, b) for a, b in zip(x, y)])
     else:
-        return min(x, y)
+        try:
+            return min(x, y)
+        except:
+            return nan
 
 def Atan2r(x, y):
     if isinstance(x, str):
@@ -194,11 +200,10 @@ def Logn(z):
 #    if isinstance(z, complex):
 #        z=Real(z)
     #if isinstance(z, complex):
-    #    try:
-    #        return np.real(ctm.log(z))
-    #    except:
-    #        return np.nan
-    return [np.real(ctm.log(a)) if isinstance(a, complex) else np.nan for a in z] if isinstance(z, list) else np.real(ctm.log(z)) 
+    try:
+        return [np.real(ctm.log(a)) if isinstance(a, complex) else np.nan for a in z] if isinstance(z, list) else Real(ctm.log(z)) 
+    except:
+        return nan
 
 def Exp(z):
     if isinstance(z, str):

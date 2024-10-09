@@ -1,0 +1,5 @@
+   	      	                  fitness                  	                      size                     
+   	      	-------------------------------------------	-----------------------------------------------
+gen	nevals	avg	gen	max	min    	nevals	std	avg    	gen	max	min	nevals	std    
+0  	300   	inf	0  	inf	336.313	300   	nan	11.3367	0  	157	2  	300   	19.3669
+0  	244   	inf	0  	inf	324.92 	244   	nan	14.1433	0  	142	2  	244   	25.0928

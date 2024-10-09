@@ -1,15 +1,13 @@
 import numpy as np
 from libs.Math import Plus, Times, Norm, Minus, Cos, Sin
-from libs.Model import IndividualTest
+from libs.Model2 import IndividualTest
 def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     #print(str(ind))
     #Numero de robots
     n=2
     rCen=0.1
     phi=3.1415/18
-    dt=0.01#Paso de derivación
-    aux1=0
-    aux2=0
+    dt=0.001#Paso de derivación
     #Vector direccion
     theta=np.arange(0,2*np.pi,2*np.pi/n)
     Vdir1=[np.cos(theta[0]),np.sin(theta[0])]
@@ -19,6 +17,8 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
     cd=CirclevirtualModel(Cd,phi,dt)
     #cd=DaisyvirtualModel(Cd,dt)
     #cd=GeronovirtualModel(Cd,dt)
+    arrival_flag1=0
+    arrival_flag2=0
     PdR1=Plus(cd,Times(rCen,Vdir1))
     PdR2=Plus(cd,Times(rCen,Vdir2))   
     tR1saved=0
@@ -179,13 +179,14 @@ def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
         cdya.insert(i,cd[1])
         #Seccion de banderas
         i=i+1
-        if(dR1<0.02)and((VxR1<0.001)and(VyR1<0.001)and(aux1==1)):
-            aux1=2
+        if(dR1<0.02)and((VxR1<0.001)and(VyR1<0.001)and(arrival_flag1==0)):
+            arrival_flag1=1
             tR1saved=tR1
-        if(dR2<0.02)and((VxR2<0.001)and(VyR2<0.001)and(aux2==1)):
-            aux2=2
+        if(dR2<0.02)and((VxR2<0.001)and(VyR2<0.001)and(arrival_flag2==0)):
+            arrival_flag2=1
             tR2saved=tR2
-
+        if((arrival_flag1)and(arrival_flag2)==1):
+            break
         tR1=tR1+dt
         tR2=tR2+dt
 

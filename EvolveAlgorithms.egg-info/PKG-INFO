@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: EvolveAlgorithms
+Version: 1.0
+Summary: Evolve algorithms for robotics
+Author: Rodrigo Villalvazo
+Author-email: rodri.villalvazo3@gmail.com
+Platform: any
+License-File: LICENSE

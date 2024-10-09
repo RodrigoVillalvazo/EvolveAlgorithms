@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+EvolveAlgorithms.egg-info/PKG-INFO
+EvolveAlgorithms.egg-info/SOURCES.txt
+EvolveAlgorithms.egg-info/dependency_links.txt
+EvolveAlgorithms.egg-info/requires.txt
+EvolveAlgorithms.egg-info/top_level.txt

@@ -1,0 +1,90 @@
+0;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))));269.54312211386195;
+
+1;Real(Real(Cosh(Power(Tan(Cosh(Coth(Power(Maximum(Vx2, qx2), Maximum(qy1, q2))))), Cosh(qy1)))));371.93582088097986;
+
+2;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))));269.54312211386195;
+
+3;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))));269.54312211386195;
+
+4;Real(Cosh(Power(Tan(Cosh(Times(Sinh(Coth(Sech(Maximum(Csc(Cosh(Sqr(Atan2r(Sqrt(Exp(xd2)), Exp(Cosh(t1)))))), Sech(Power(Minimum(Sinh(Sinh(Tan(t2))), Sqr(Sinh(Cos(t1)))), Maximum(Sqrt(Tanh(Cot(qx1))), Power(Divide(Sqrt(qd1), Logn(qy1)), Tanh(Sech(q2)))))))))), Maximum(Divide(Maximum(Asin(Sec(Minus(Coth(Tan(Divide(Sec(t1), Sinh(yd1)))), Real(Csc(Minus(Coth(xd2), Asin(xd2))))))), Sec(Csc(Plus(Sinh(Tanh(Sqrt(Exp(Vy2)))), Sin(Csch(Real(Cos(V1)))))))), Cos(Sqrt(Sin(Plus(Tan(Logn(Norm(Sin(ydp1)))), Norm(Sqrt(Minimum(Sech(q1), Divide(qd2, Vx2))))))))), Sech(Divide(Times(Tanh(Atanr(Sqrt(Coth(Sec(Tanh(xdp1)))))), Coth(Minimum(Atan2r(Power(Plus(Csc(Vx2), Coth(t1)), Logn(Sqr(ydp1))), Atan2r(Csch(Logn(qx2)), Exp(Tanh(xd1)))), Logn(Power(Cot(Coth(xdp1)), Tan(Cot(Vx1))))))), Norm(Times(Sec(Norm(Coth(Times(Cos(yd1), Cosh(xd2))))), Sec(Asin(Cosh(Csch(Sech(Vy1))))))))))))), Cosh(qy1))));371.94000831173804;
+
+5;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))));269.54312211386195;
+
+6;Real(Cosh(Power(Tan(Cosh(qy1)), Cosh(qy1))));4.22738561088059e+17;
+
+7;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(Atanr(qy1))))));270.0556291185966;
+
+8;Real(Cosh(Power(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)), Cosh(qy1))));4167.986842852455;
+
+9;Real(Real(Cosh(Tan(Cosh(Atanr(qy1))))));294.12386289353236;
+
+10;Real(Real(qy1));301.748957502262;
+
+11;Real(Cosh(Power(Tan(Cosh(Atanr(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))))), Cosh(qy1))));371.94000831173804;
+
+12;Real(Cosh(Power(Tan(qy1), Cosh(qy1))));299.1296349600999;
+
+13;Real(Real(Cosh(Power(Tan(Cosh(Atanr(Cosh(Atanr(qy1))))), Cosh(qy1)))));inf;
+
+14;Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))));269.54312211386195;
+
+15;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))));269.54312211386195;
+
+16;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(Atanr(qy1))))));270.0556291185966;
+
+17;Real(Real(Cosh(Logn(Exp(Sec(qy2))))));296.9471088996788;
+
+18;Real(Cosh(Power(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))), Cosh(qy1))));inf;
+
+19;Real(Tan(Cosh(Atanr(qy1))));300.8768516103301;
+
+20;Real(Cosh(Power(Tan(Cosh(qy1)), Cosh(qy1))));4.22738561088059e+17;
+
+21;Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(Atanr(qy1)))));270.0556291185966;
+
+22;Real(Real(Cosh(Tan(Cosh(Atanr(qy1))))));294.12386289353236;
+
+23;Real(Real(Cosh(Power(Power(Tan(Real(Sinh(Tan(Minus(Atanr(Asin(Abs(Cosh(Sqrt(Tan(Coth(yd1))))))), Tan(Acos(Sin(Cosh(Sech(Csch(Coth(tR)))))))))))), Cosh(qy1)), Cosh(qy1)))));371.94000831173804;
+
+24;Real(Real(Cosh(Power(Tan(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))), Cosh(qy1)))));371.93365686844277;
+
+25;Real(Real(Cosh(Cosh(Atanr(qy1)))));297.21400397737705;
+
+26;Real(Real(Cosh(Power(Tan(Cosh(Atanr(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))))), Cosh(qy1)))));371.94000831173804;
+
+27;Asin(Csc(Cos(Atan2r(Exp(Exp(Asin(Tanh(Atanr(Atan2r(Times(qy2, V2), Power(xdp2, q1))))))), Sqrt(Times(Sinh(Real(Coth(Minus(Times(Vy2, yd1), Power(ydp1, qx1))))), Cosh(Atan2r(Atanr(Atanr(Maximum(Vx1, yd2))), Asin(Divide(Cot(xdp2), Cos(V1)))))))))));371.94000831173804;
+
+28;Real(Real(Cosh(qy1)));299.15675655080605;
+
+29;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))))));inf;
+
+30;Real(Real(Cosh(Power(qy1, Cosh(qy1)))));299.27895241186854;
+
+31;Real(Real(Cosh(Power(Tan(Cosh(Atanr(Tan(Cosh(Atanr(qy1)))))), Cosh(qy1)))));inf;
+
+32;Real(Cosh(qy1));299.15675655080605;
+
+33;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))))));inf;
+
+34;Real(Cosh(Power(qy1, Cosh(qy1))));299.27895241186854;
+
+35;Real(Cosh(Power(Tan(Cosh(Atanr(Tan(Cosh(Atanr(qy1)))))), Cosh(qy1))));inf;
+
+36;Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))));269.54312211386195;
+
+37;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))));269.54312211386195;
+
+38;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))));269.54312211386195;
+
+39;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))));269.54312211386195;
+
+40;Real(Cosh(Power(Tan(Cosh(Atanr(Tan(Cosh(Atanr(qy1)))))), Cosh(qy1))));inf;
+
+41;Real(Real(Cosh(Power(qy1, Cosh(qy1)))));299.27895241186854;
+
+42;Real(Cosh(Power(Tan(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))), Cosh(qy1))));400.96541633700974;
+
+43;Real(Cosh(Atanr(Divide(Minus(Asin(Cos(Sqr(Cos(Csc(Sinh(Sin(Real(Power(t2, qx1))))))))), Sech(Sqrt(Divide(Cot(Csc(Minus(Plus(Logn(Atan2r(qd1, ydp1)), Tanh(Maximum(ydp1, q2))), Acos(Plus(Minimum(qy1, qy2), Sinh(V2)))))), Divide(Sin(Power(Logn(Acos(Minus(qx2, V1))), Tanh(Tanh(Power(Vx2, ydp2))))), Exp(Real(Power(Real(Sec(qy1)), Csc(Cosh(Vx2)))))))))), Tan(Atan2r(Sin(Sech(Sec(Asin(Sinh(Divide(Minimum(Maximum(V1, qd1), Sech(Vy1)), Sqrt(Logn(tR)))))))), Atan2r(Sinh(Sech(Minimum(Times(Sqr(Exp(Divide(Vy2, qx2))), Cos(Minus(Times(qd2, qy1), Abs(q1)))), Sin(Coth(Asin(Times(xdp2, Vx2))))))), Csch(Tanh(Tanh(Cos(Plus(Sec(Sech(qy2)), Divide(Asin(td), Sec(xd2))))))))))))));371.94000831173804;
+
+44;Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1)))))))));9.991103799791376e+172;
+

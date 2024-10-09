@@ -1,0 +1,2 @@
+Abs(Real(Sec(Sec(Minus(Real(Real(Abs(Cot(Sqr(qy2))))), Minus(Norm(Sin(Asin(Abs(xdp1)))), Asin(Atanr(Power(Sinh(xd2), Times(xdp2, yd1)))))))))); 336.3125168140001
+Exp(Acos(Vx2)); 324.91975546339893

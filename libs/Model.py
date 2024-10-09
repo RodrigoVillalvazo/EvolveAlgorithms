@@ -47,13 +47,15 @@ def IndividualTest(u,indR1,r,u0):
 
     K_1=[1,1]
     K_2=[1,1]
+    #K_1=[1,1,1,1,1,1,1,1]
+    #K_2=[1,1,1,1,1,1,1,1]
     individual=str(indR1)
     try:
-        vel_u=eval(individual.replace('"', '').replace("'", ''))
+        vel_u=Real(eval(individual.replace('"', '').replace("'", '')))
     except ValueError:#Excepcion para controlar una mala traduccion del individo, solo por precaucion(En teoria no deberia ocurrir nunca)
         sys.exit()
     ##########################################################################
-    vR1b=((cmath.log(np.abs(cmath.log(Cos(cmath.log(np.linalg.norm(Minus(q1,OrR1R1)))))))*cmath.log(np.linalg.norm(Minus(q1,OrR1R1)))))+((cmath.log(np.abs(cmath.log(Cos(cmath.log(np.linalg.norm(Minus(q2,OrR2R1)))))))*cmath.log(np.linalg.norm(Minus(q2,OrR2R1)))))
+    vR1b=Real((cmath.log(np.abs(cmath.log(Cos(cmath.log(np.linalg.norm(Minus(q1,OrR1R1)))))))*cmath.log(np.linalg.norm(Minus(q1,OrR1R1)))))+Real((cmath.log(np.abs(cmath.log(Cos(cmath.log(np.linalg.norm(Minus(q2,OrR2R1)))))))*cmath.log(np.linalg.norm(Minus(q2,OrR2R1)))))
     
     #vR1b=(np.real(cmath.log(np.abs(cmath.log(cmath.cos(cmath.log(np.linalg.norm(Minus(q1,OrR1R1)))))))*cmath.log(np.linalg.norm(Minus(q1,OrR1R1)))))+(np.real(cmath.log(np.abs(cmath.log(cmath.cos(cmath.log(np.linalg.norm(Minus(q2,OrR2R1)))))))*cmath.log(np.linalg.norm(Minus(q2,OrR2R1)))))
     #############################################################################
@@ -62,6 +64,8 @@ def IndividualTest(u,indR1,r,u0):
     vR1=Plus(vel_u,vR1b)
     vel_1=[ModelOfRobot(vR1,K_1,qd_p1,qd1,q1)]
     vel_2=[ModelOfRobot(vR2,K_2,qd_p2,qd2,q2)]
+    #vel_1=[OmniModel(vR1,K_1,qd_p1,qd1,q1)]
+    #vel_2=[OmniModel(vR2,K_2,qd_p2,qd2,q2)]
     return vel_1,vel_2
 
 def ModelOfRobot(Vel_u,K,vel_des,pos_des,pos_q):
@@ -75,7 +79,8 @@ def ModelOfRobot(Vel_u,K,vel_des,pos_des,pos_q):
     k_2=K[1]
     VxR_a=xd_p+k_1*(x_d-q_x)
     VyR_b=yd_p+k_2*(y_d-q_y)
-    if (~isinstance(Vel_u,(float,np.float64)))>1:
+    #aux=isinstance(Vel_u,(float,np.float64))
+    if (isinstance(Vel_u,(float,np.float64))==False):
         Vx_u=Vel_u[0]
         Vy_u=Vel_u[1]
         VxR_r=Times(Vx_u,(y_d-q_y))

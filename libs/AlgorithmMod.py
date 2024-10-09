@@ -5,6 +5,10 @@ import sys
 import os
 import pickle
 from deap import tools
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+sys.path.insert(0, '~/libs')
+sys.path.insert(1, '~/Simulation')
 def update_progress(job_title, progress):
     try:
         os.system('clc')
@@ -180,7 +184,6 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
     tracemalloc.start()
     counter=0
     start_gen = 0
-    #sys.stdout.write(dir_path+'/'+dir)
     if checkpoint:
         # A file name has been given, then load the data from the file
         cp = pickle.load(open(dirChkP, "rb"))
@@ -193,7 +196,7 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
         halloffame = cp["halloffame"]
         logbook = cp["logbook"]
         random.setstate(cp["rndstate"])
-        #sys.stdout.write(str(start_gen))
+        File2HoF=str(dir+'HOF.txt')
         if start_gen>=ngen-1:
             sys.stdout.write("\n")
             sys.stdout.write("Evolución Completa de la corrida "+str(nrun)+ ": Cambiar número de corrida")
@@ -201,7 +204,6 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
             sys.stdout.flush()
             input("Press Enter to continue...")
             sys.exit()
-            #break
     else:
         # Start a new evolution
         sys.stdout.write("\n")
@@ -216,7 +218,6 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
         File2HoF=str(dir+'HOF.txt')
         FILEHOF=open(File2HoF,'a')
         File2Gena=str(dir+'Base.txt')
-        #FILEGEN=open(File2Gen,'a')
         FILEGEN=open(File2Gena,'a')
         for ind, fit in zip(invalid_ind, fitnesses):
             ind.fitness.values = fit
@@ -226,7 +227,6 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
             FILEGEN.write('\n')
             counter=counter+1
         FILEGEN.close()
-        #FILEGEN.close()
         if halloffame is None:
             raise ValueError("halloffame parameter must not be empty!")
         halloffame.update(population)
@@ -238,16 +238,9 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
         logbook.record(gen=start_gen, nevals=len(invalid_ind), **record)
         if verbose:
             sys.stdout.write("\n")
-            #sys.stdout.write(logbook.stream)
             sys.stdout.flush()
-            #print(logbook.stream)
         update_progress("Corriendo GP -...", 0/3)
         sys.stdout.flush()
-        #Saving the generation 0
-        #for m in range(len(population)):
-        #    current, peak = tracemalloc.get_traced_memory()
-        #    FILEGEN.write(str(population[m])+"; "+str(population[m].fitness.values[0])+f"; Current memory: {current / 10**4}MB; Peak: {peak / 10**4}MB;\n")
-        #    FILEGEN.write('\n')
     # Begin the generational process   
     #Naming the best individual for generation data file
     hof_size = len(halloffame.items) if halloffame.items else 0
@@ -257,8 +250,6 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
         # Vary the pool of individuals
         offspring = varAnd(offspring, toolbox, cxpb, mutpb)
         update_progress("Corriendo GP - Gen:"+str(gen)+"/"+str(ngen)+" Individuo-> "+str(halloffame.items[0])+" Desempeño-> "+str(halloffame.items[0].fitness.values[0]), (gen)/ngen)
-        #sys.stdout.write(f"\nCurrent memory usage is {current / 10**4}MB; Peak was {peak / 10**4}MB\n")
-        #update_progress("Corriendo GP - Gen:"+str(gen)+"/"+str(ngen)+" Individuo-> "+str(offspring), (gen)/ngen)
         sys.stdout.flush()
         # Evaluate the individuals with an invalid fitness
         invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
@@ -280,7 +271,10 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
         # Update the hall of fame with the generated individuals
         halloffame.update(offspring)
         #Saving data to file by the best individual
-        FILEHOF=open(File2HoF,'a')
+        try:
+            FILEHOF=open(File2HoF,'a')
+        except:
+            print(File2HoF)
         FILEHOF.write(str(halloffame.items[0])+"; "+str(halloffame.items[0].fitness.values[0]))
         FILEHOF.write('\n')
         FILEHOF.close()
@@ -290,17 +284,12 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
         record = stats.compile(population) if stats else {}
         logbook.record(gen=gen, nevals=len(invalid_ind), **record)
         population = toolbox.select(population, k=len(population))
-        auxOffspring=str(offspring)
-        #for m in range(len(offspring)):
-        #    FILEGEN.write(str(offspring[m])+"; "+str(offspring[m].fitness.values[0])+f"; Current memory: {current / 10**4}MB; Peak: {peak / 10**4}MB;\n")
-        #    FILEGEN.write('\n')          
+        auxOffspring=str(offspring)       
         if gen % FREQ == 0:
             sys.stdout.write(str(gen % FREQ)) 
             # Fill the dictionary using the dict(key=value[, ...]) constructor
-            #sys.stdout.write(str(offspring))
             cp = dict(population=population, generation=gen, halloffame=halloffame,
                     logbook=logbook, rndstate=random.getstate())
-            #cp = dict(population=str(offspring[m]))
             pickle.dump(cp, open(dirChkP, "wb"))   
         if verbose:
             sys.stdout.write("\n")
@@ -311,8 +300,6 @@ def eaSimpleModWithElitism(dir,dirChkP,population, toolbox, cxpb, mutpb, ngen, n
             MyOutFile.write("\n")
             sys.stdout.flush()
             MyOutFile.close()
-        #FILEGEN.close()
-        #FILE2GEN.close()
     tracemalloc.stop()
     update_progress("Corriendo GP - Gen:"+str(gen)+"/"+str(ngen), 1)
     sys.stdout.flush()

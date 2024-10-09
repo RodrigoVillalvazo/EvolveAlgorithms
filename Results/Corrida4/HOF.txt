@@ -1,4 +1,0 @@
-Coth(Sech(Csch(ydp2))); 65.599
-Coth(Sech(Csch(ydp2))); 65.599
-Coth(Sech(Csch(ydp2))); 65.599
-Coth(Sech(Csch(ydp2))); 65.599

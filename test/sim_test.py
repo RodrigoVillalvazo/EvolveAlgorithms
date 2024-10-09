@@ -2,18 +2,26 @@
 import csv
 import numpy as np
 import math
+import time
 import matplotlib.pyplot as plt
 import matplotlib.animation as manimation
 import os, sys
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
-from Simulations.Simulate import Evasion2Robots
+from Simulations.Simulate2 import Evasion2Robots
+firstTime=time.time()
+fit=[]
 for i in range (10):
+    ret_fit1=0
+    ret_fit2=0
+    ret_fit3=0
     FileD=open('Training.txt')#Direccion contenedora del archivo de condiciones iniciales
-    td=4.0
+    #td=4.0
     index=i
-    ind='Minimum(Vy1, qx1)'
+    #ind='Power(Abs(Sec(xd2)), tR)'
+    ind='Sin(Vy1)'
+    #ind='Logn(Sqrt(Norm(xdp2)))'
     reader=csv.reader(FileD, delimiter=' ',skipinitialspace=True)#Leemos todo el documento
     lineData = list()#variable para las lineas
     cols=next(reader)#variable para las columnas
@@ -32,7 +40,8 @@ for i in range (10):
     #Hacemos un barrido de las condiciones inciales y accedemos a las que necesitemos
     Rob1=[lineData[0][index],lineData[1][index]]#Posicion inicial del robot 1
     Rob2=[lineData[2][index],lineData[3][index]]#Posicion inicial del robot 2
-    tf=4.50
+    td=float(lineData[6][index])
+    tf=td+0.50
     rRob1,rRob2=0.02,0.02#Radio del robot 1 y robot2
     s,Desires=Evasion2Robots(ind,tf,td,FileD,Rob1,Rob2,rRob1,rRob2,Cd)#Simulacion de los robots para cada condicion inicial y cada individuo
     radios=Desires[0]
@@ -66,21 +75,27 @@ for i in range (10):
     Ext1=(timeSavedR1==0)and(ErrorTiempoR1>tolerance)
     Ext2=(timeSavedR2==0)and(ErrorTiempoR2>tolerance)
 
-    fitness=np.sqrt((ErrorPosRob1**2)+(ErrorPosRob2**2)+(ErrorTiempoR1**2)+(ErrorTiempoR2**2))#Fitness error cuadratico medio
-    
-    if (math.isnan(fitness) or math.isinf(fitness)):#Penalizamos si el fitness es infinito o si no es un numero
-        fitness=50.0
+    old_fitness=(ErrorPosRob1**2)+(ErrorPosRob2**2)+(ErrorTiempoR1**2)+(ErrorTiempoR2**2)#Fitness error cuadratico medio
+    print("Before restrictions "+str(old_fitness))  
+    if (math.isnan(old_fitness) or math.isinf(old_fitness)):#Penalizamos si el fitness es infinito o si no es un numero
+        ret_fit1=old_fitness+120.0
     elif((dsR1<=radio)and(dsR2<=radio)):
-        fitness=fitness+30.0
+        ret_fit2=old_fitness+100.0
     elif(Ext1 or Ext2):#Penalizamos la diferencia entre tiempos de llegada de cada robot
-        fitness=fitness+40.0
-    elif((RuntimeWarning==True)or(RuntimeError==True)or(ValueError==True)):
-        fitness=fitness+60.0
+        ret_fit3=old_fitness+110.0
     else:
-        fitness=fitness+0.00001#Fitness error cuadratico medio   
-    print(fitness)  
+        old_fitness=old_fitness
+    new_fitness=ret_fit1+ret_fit2+ret_fit3+old_fitness#Fitness error cuadratico medio 
+    fit.append(new_fitness)
+    print("After restrictions "+str(new_fitness)+"  "+str(ErrorPosRob1)+"  "+str(ErrorPosRob2)+"  "+str(ErrorTiempoR1)+"  "+str(ErrorTiempoR2)+'\n')  
     '''Create the path frame'''
     fig=plt.figure()
     plt.plot(Try1,Try2,Try3,Try4)
+    plt.plot(PdR1[0],PdR1[1],'*')
+    plt.plot(PdR2[0],PdR2[1],'*')
     plt.grid(True)
     plt.show()
+
+lastTime=time.time()
+totalTime=lastTime-firstTime
+print("Elapsed time: "+str(totalTime) + "Mean Fitness: " + str(np.mean(fit)))
