@@ -1,34 +1,3 @@
-Sqrt(td); 295.24152178675513
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Sqr(Sech(Divide(Sqr(Power(qx2, yd1)), Coth(Times(V1, xd1))))))))); 295.0863602698225
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(xd1))))); 274.10953808371954
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(Atanr(qy1)))))); 270.0556291185966
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(Atanr(qy1)))))); 270.0556291185966
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
-Real(Real(Cosh(Power(Tan(Cosh(Atanr(qy1))), Cosh(qy1))))); 269.54312211386195
+Logn(Real(td)); 71.3030347488161
+Logn(Real(td)); 71.3030347488161
+Logn(Real(td)); 71.3030347488161

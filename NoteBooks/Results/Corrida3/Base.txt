@@ -1,0 +1,10 @@
+0;Norm(Sec(yd_2));104.1543561108488;
+
+1;Plus(Coth(Cot(Divide(Plus(Acos(Exp(Exp(OrR2R1x))), Exp(Sech(Divide(yd_2, dr_2)))), Asin(Plus(Atan2r(Coth(y_1), Times(dr_1, OrR2R1y)), Plus(Cot(ds_2), Coth(t_1))))))), Plus(Norm(Cot(Cos(Asin(Sinh(Sin(Vx_1)))))), Real(Atanr(Cosh(Sinh(Tan(Cosh(x_2))))))));1.8841123347178755e+26;
+
+2;Acos(Sin(Atanr(Atanr(ds_2))));68.89375979026428;
+
+3;Cos(Divide(Tanh(Cos(Sinh(Minus(Sec(Cot(Csch(dr_2))), Csch(Norm(Divide(xd_2, x_2))))))), Csc(Norm(Coth(Atan2r(Minimum(Sqr(Tan(xd_2)), Divide(Exp(Vx_1), Plus(x_2, dr_1))), Norm(Norm(Tanh(Vy_2)))))))));354.89775221471604;
+
+4;Exp(Vy_2);62.52518957490811;
+

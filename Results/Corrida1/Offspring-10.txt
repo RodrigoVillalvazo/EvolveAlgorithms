@@ -1,0 +1,22 @@
+0;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));88.6437207169892;
+
+1;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));88.6437207169892;
+
+2;Atan2r(Abs(Tanh(Plus(Vy_2, Vy_2))), Sqr(Sqr(Csch(Sech(dr_2)))));151.2326691076772;
+
+3;Atan2r(Abs(Tanh(Plus(y_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));126.78727447696906;
+
+4;Atan2r(Abs(Tanh(Plus(Csch(Sech(dr_2)), y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));134.1226864085544;
+
+5;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Vy_2)));126.98509008842;
+
+6;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));88.6437207169892;
+
+7;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));88.6437207169892;
+
+8;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));88.6437207169892;
+
+9;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));88.6437207169892;
+
+10;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Norm(Vy_2));133.19961585938137;
+

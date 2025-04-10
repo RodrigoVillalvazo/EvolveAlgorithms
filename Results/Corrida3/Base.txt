@@ -1,0 +1,10 @@
+0;Norm(Cos(Logn(Maximum(Sinh(Minus(Asin(OrR1R1y), Sin(xd_1))), Cosh(Sech(Times(xd_2, dr_2)))))));59.06302490926839;
+
+1;Times(Abs(Logn(Asin(Vy_1))), Atan2r(Real(Sinh(Sin(Acos(Tan(Coth(Vy_2)))))), y_2));346.88499999999993;
+
+2;Abs(Sqr(Sqrt(Csc(Minus(xd_1, Vy_2)))));346.88282566801536;
+
+3;Plus(Exp(xd_2), Sec(x_1));58.97076135957021;
+
+4;Sin(Exp(Vy_1));57.50778434986962;
+

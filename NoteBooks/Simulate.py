@@ -1,226 +1,242 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar  5 19:12:42 2025
+
+@author: serdg
+"""
+import cmath
+from math import inf
+from libs.Math import Plus, Minus, Divide, Times,Power, Maximum, Minimum, Atan2r
+from libs.Math import Sqrt, Sqr, Logn, Exp, Sinh, Cosh, Tanh, Csch, Sech, Coth, Cos, Sin, Tan, Csc, Sec, Cot, Asin, Acos, Norm, Abs, Real, Atanr
 import numpy as np
-from Math import Plus, Times, Norm, Minus, Cos, Sin
-from Model import IndividualTest
-def Evasion2Robots(ind,tf,td,FILED,Rob1,Rob2,rRob1,rRob2,Cd):
-    #print(str(ind))
-    #Numero de robots
-    n=2
-    rCen=0.1
-    phi=3.1415/18
-    dt=0.001#Paso de derivación
-    #Vector direccion
-    theta=np.arange(0,2*np.pi,2*np.pi/n)
-    Vdir1=[np.cos(theta[0]),np.sin(theta[0])]
-    Vdir2=[np.cos(theta[1]),np.sin(theta[1])]
-    #....#
-    #Posicion deseada
-    cd=CirclevirtualModel(Cd,phi,dt)
-    #cd=DaisyvirtualModel(Cd,dt)
-    #cd=GeronovirtualModel(Cd,dt)
-    arrival_flag1=0
-    arrival_flag2=0
-    PdR1=Plus(cd,Times(rCen,Vdir1))
-    PdR2=Plus(cd,Times(rCen,Vdir2))   
-    tR1saved=0
-    tR2saved=0
-    tR1=0
-    tR2=0  
-    r=[rRob1,rRob2]#Radio de los robots y obstaculos
-    pos=[Rob1,Rob2,PdR1,PdR2]#Vector de Condiciones iniciales
-    pd=[pos[2],pos[3]]#Vector de posiciones deseadas
-    r1=r[0]
-    r2=r[1]
-    qR1=[]
-    qR2=[]
-    vrR1=[]
-    tsR1=[]
-    tsR2=[]
+import sys
+saturacion=inf#Velocidad maxima
+def Simulacion(ind=None,pos=0.0,pd=0.0,r=0.10,tf=100000,td=1000,dt=0.001,ep=0.0001):
+    """
+    [Struct] ind - Individuo a evaluar \n
+    [List] pos - Vector de posicion de los robots \n
+    [List] pd - Vector de posicion deseada \n
+    [List] r - Vector de radios de los robots \n
+    [Int] tf - tiempo de simulacion \n
+    [int] td - tiempo deseado \n
+    [int] dt - Paso de integracion \n
+    [int] ep - Epsilon para evitar indefiniciones \n
+    """
     Try1=[]
     Try2=[]
     Try3=[]
     Try4=[]
-    dsR1a=[]
-    dsR2a=[]
-    doR1a=[]
-    doR2a=[]
-    dR2a=[]
-    dR1a=[]
-    drR1a=[]
-    drR2a=[]
-    vxR1=[]
-    vyR1=[]
-    vxR2=[]
-    vyR2=[]
-    cdxa=[]
-    cdya=[]    
+    ds1=[]
+    ds2=[]
+    ts1=[]
+    ts2=[]
+    do1=[]
+    do2=[]
+    Vx1=[]
+    Vy1=[]
+    Vx2=[]
+    Vy2=[]
+    tR1saved=0.0
+    tR2saved=0.0
+    r1=r[0]
+    r2=r[1]
+    aux1=1
+    aux2=1
+    z=1
+    #Obtener velocidades
+    radio=(r1+r2)+ep
     #Posicion del obstaculo
-    posR1x=float(eval(str(pos[0][0]).replace('"', '').replace("'", '')))#float
-    posR1y=float(eval(str(pos[0][1]).replace('"', '').replace("'", '')))#float
-    posR2x=float(eval(str(pos[1][0]).replace('"', '').replace("'", '')))#float
-    posR2y=float(eval(str(pos[1][1]).replace('"', '').replace("'", '')))#float
+    x_1=float(eval(str(pos[0][0]).replace('"', '').replace("'", '')))#float
+    y_1=float(eval(str(pos[0][1]).replace('"', '').replace("'", '')))#float
+    x_2=float(eval(str(pos[1][0]).replace('"', '').replace("'", '')))#float
+    y_2=float(eval(str(pos[1][1]).replace('"', '').replace("'", '')))#float
+    xd_1=float(pd[0][0])
+    yd_1=float(pd[0][1])
+    xd_2=float(pd[1][0])
+    yd_2=float(pd[1][1])
+    xd_p1=0.0
+    yd_p1=0.0
+    xd_p2=0.0
+    yd_p2=0.0
+    
+    Vx_1=0.0
+    Vy_1=0.0
+    Vx_2=0.0
+    Vy_2=0.0
 
-    pdR1=[float(pd[0][0]),float(pd[0][1])]
-    pdR2=[float(pd[1][0]),float(pd[1][1])]
-    #Inicializar el vector u
-    u=[posR1x,posR1y,posR2x,posR2y,pdR1,pdR2,0,0,0,0,0,0,0,0,0,0,td]
-    #u=[posR1x,pdR1,0,posR1y,pdR2,0,posR2x,posR2y,pdR3,pdR4,0,0,0,0,0,0,posR3x,posR3y,0,0,0,0,posR4x,posR4y]   
-    u0R1=[u[0],u[1]]
-    u0R2=[u[2],u[3]]
-
-    VxR1=u[6]
-    VyR1=u[7]
-    VxR2=u[8]
-    VyR2=u[9]
-    tR1=u[10]
-    tR2=u[11]
+    t_1=0.0
+    t_2=0.0
 
     #distancia inicial del robot al objetivo
-    qR1=[posR1x,posR1y]
-    qR2=[posR2x,posR2y]
-
-    doR1=Norm(Minus(qR1,pdR1))
-    dR1=doR1
-    doR2=Norm(Minus(qR2,pdR2))
-    dR2=doR2
-
-    #distancia del robot al obstaculo
-    dsR1=Norm(Minus(qR1,qR2))
-    dsR2=Norm(Minus(qR2,qR1))
-
-    drR1=0        #distancia recorrida
-    drR2=0
-
-    ep=0.0001;   #epsilon al objetivo
-    i=1
-    #Obtener velocidades
-    radiO=(r1+r2)+ep
-    vR1,vR2=IndividualTest(u,ind,r,u0R1)
-    #vR1=ModelKaF1TestRobot1(u,ind,r,u0R1)
-    #vR2=ModelKaF1TestRobot2(u,ind,r,u0R2)
-
-    qR1=[qR1]
-    qR2=[qR2]   
-
-    while (tR1<=tf)and(tR2<=tf)and(dsR1>radiO)and(dsR2>radiO):
-
-        #auxz=Times(dt,vR1[i-1])
-
-        qR1.insert(i,Plus(Times(dt,vR1[i-1]),qR1[i-1]))
-        qR2.insert(i,Plus(Times(dt,vR2[i-1]),qR2[i-1]))
-        #qR1.append(Plus(Times(dt,vR1[i-1]),qR1[i-1]))#actualizar posiciones del Robot 1
-        #qR2.append(Plus(Times(dt,vR2[i-1]),qR2[i-1]))
+    q_1=[x_1,y_1]
+    q_2=[x_2,y_2]
+    qd_1=[xd_1,yd_1]
+    qd_2=[xd_2,yd_2]
+    
+    do_1=np.linalg.norm(Minus(q_1,qd_1))#Distancia al objetivo 1
+    do_2=np.linalg.norm(Minus(q_2,qd_2))#Distancia al objetivo 2
+    dr_1=do_1#Distancia del robot 1 a la meta
+    dr_2=do_2#Distancia del robot 1 a la meta
+    ds_1=np.linalg.norm(Minus(q_1,q_2))#Distancia al obstaculo 1
+    ds_2=np.linalg.norm(Minus(q_2,q_1))#Distancia al obstaculo 2
 
 
-        drR1=drR1+Norm(Minus(qR1[i],qR1[i-1]))#distancia recorrida
-        drR2=drR2+Norm(Minus(qR2[i],qR2[i-1]))
+    #vR2c=str(ind).replace('"', '').replace("'", '')
+###############################################################################    
+    OrR1R1=distancia_entre_robots(r=radio, q_a=q_1, q_b=q_2)
+    OrR1R1x,OrR1R1y=[OrR1R1[0],OrR1R1[1]]
+    OrR2R1=distancia_entre_robots(r=radio, q_a=q_2, q_b=q_1)
+    OrR2R1x,OrR2R1y=[OrR2R1[0],OrR2R1[1]]
+    
+    try:
+        vR2a=np.real(eval(str(ind)))
+        pass
+    except (OverflowError,MemoryError):#Excepcion para evitar operaciones con complejos y no complejos, y problemas de indeterminacion entre funciones que algun valor no este entre su dominio
+        print(ind)
+        print("\nSimulacion terminada por maximo de memoria consumido\n")
+        sys.exit()
+        pass
+
+    vR2b=repulsor(q_A=q_1,O_rA=OrR1R1)+repulsor(q_A=q_2,O_rA=OrR2R1)   
+    v=vR2a+vR2b
+    Robot1=Omnidireccional(u=v,x=x_1,y=y_1,xd=xd_1,yd=yd_1,xd_p=xd_p1,yd_p=yd_p1)
+    Robot2=Omnidireccional(u=v,x=x_2,y=y_2,xd=xd_2,yd=yd_2,xd_p=xd_p2,yd_p=yd_p2)    
+    Vx_1,Vy_1=Robot1
+    Vx_2,Vy_2=Robot2
+###############################################################################
+    vR1=[Robot1]
+    vR2=[Robot2]
+
+    qR1=[q_1]
+    qR2=[q_2]
+     
+    while (t_1<=tf)and(t_2<=tf)and(ds_1>radio)and(ds_2>radio):
+        
+        qR1.insert(z,Plus(Times(dt,vR1[z-1]),qR1[z-1]))#actualizar posiciones del Robot 1
+        qR2.insert(z,Plus(Times(dt,vR2[z-1]),qR2[z-1]))
 
 
-        u[0]=qR1[i][0]
-        u[1]=qR1[i][1]
-        u[2]=qR2[i][0]
-        u[3]=qR2[i][1]
+        do_1=do_1+np.linalg.norm(Minus(qR1[z],qd_1))#distancia recorrida
+        do_2=do_2+np.linalg.norm(Minus(qR2[z],qd_2))
+        dr_1=np.linalg.norm(Minus(qR1[z],qd_1))
+        dr_2=np.linalg.norm(Minus(qR2[z],qd_2))
 
         #Robot 1
-        x1=qR1[i][0]
-        y1=qR1[i][1]
-        xRob1=x1
-        yRob1=y1
+        x_1=qR1[z][0]
+        y_1=qR1[z][1]
+
         #Robot2
-        x2=qR2[i][0]
-        y2=qR2[i][1]
-        xRob2=x2
-        yRob2=y2
+        x_2=qR2[z][0]
+        y_2=qR2[z][1]
 
-        dR1=Norm(Minus(qR1[i],pdR1))                #nueva distancia al objetivo
-        dR2=Norm(Minus(qR2[i],pdR2))
         
-        dsR1=Norm(Minus(qR1[i],qR2[i]))
-        dsR2=Norm(Minus(qR2[i],qR1[i]))
+        ds_1=np.linalg.norm(Minus(qR1[z],qR2[z]))
+        ds_2=np.linalg.norm(Minus(qR2[z],qR1[z]))
+###############################################################################
+        OrR1R1=distancia_entre_robots(r=radio, q_a=qR1[z], q_b=qR2[z])
+        OrR1R1x,OrR1R1y=[OrR1R1[0],OrR1R1[1]]
+        OrR2R1=distancia_entre_robots(r=radio, q_a=qR2[z], q_b=qR1[z])
+        OrR2R1x,OrR2R1y=[OrR2R1[0],OrR2R1[1]]
+        
+        try:
+            vR2a=np.real(eval(str(ind)))
+            pass
+        except (OverflowError,MemoryError):#Excepcion para evitar operaciones con complejos y no complejos, y problemas de indeterminacion entre funciones que algun valor no este entre su dominio
+            print(ind)
+            print("\nSimulacion terminada por maximo de memoria consumido\n")
+            sys.exit()
+            pass
+        
+        vR2b=repulsor(q_A=q_1,O_rA=OrR1R1)+repulsor(q_A=q_2,O_rA=OrR2R1)   
+        v=vR2a+vR2b
+        Robot1=Omnidireccional(u=v,x=x_1,y=y_1,xd=xd_1,yd=yd_1,xd_p=xd_p1,yd_p=yd_p1)
+        Robot2=Omnidireccional(u=v,x=x_2,y=y_2,xd=xd_2,yd=yd_2,xd_p=xd_p2,yd_p=yd_p2)    
+        vR1.insert(z,Robot1)
+        vR2.insert(z,Robot2)
+###############################################################################
+        Vx_1,Vy_1=Robot1
+        Vx_2,Vy_2=Robot2
 
-        cd=CirclevirtualModel(Cd,phi,tR1)
-        #cd=DaisyvirtualModel(Cd,tR1)
-        #cd=GeronovirtualModel(Cd,tR1)
-        PdR1=Plus(cd,Times(rCen,Vdir1))
-        PdR2=Plus(cd,Times(rCen,Vdir2))    
-        VR1,VR2=IndividualTest(u,ind,r,u0R1)
-        #vR1[i]=ModelKaF1TestRobot1(u,ind,r,u0R1)                 #obtener una nueva velocidad del robot 1
-        VxR1,VyR1=[VR1[0][0],VR1[0][1]]
-        #vR2[i]=ModelKaF1TestRobot2(u,ind,r,u0R2)                 #obtener una nueva velocidad del robot 2
-        VxR2,VyR2=[VR2[0][0],VR2[0][1]]
-        vR1.insert(i,VR1[0])
-        vR2.insert(i,VR2[0])
+        ts1.insert(z,t_1)
+        ts2.insert(z,t_2)
 
-        u[6]=VxR1
-        u[7]=VyR1
-        u[8]=VxR2
-        u[9]=VyR2
-        u[4]=PdR1
-        u[5]=PdR2
-        vrR1.append(vR1)
-        tsR1.append(tR1)
-        tsR2.append(tR2)
-        Try1.append(qR1[i-1][0])#s.try
-        Try2.append(qR1[i-1][1])
-        Try3.append(qR2[i-1][0])
-        Try4.append(qR2[i-1][1])
-        dsR1a.append(dsR1)
-        dsR2a.append(dsR2)
-        doR1a.append(doR1)
-        doR2a.append(doR2)
-        dR1a.append(dR1)
-        dR2a.append(dR2)
-        drR1a.append(drR1)
-        drR2a.append(drR2)
-        vxR1.append(VxR1)
-        vxR2.append(VxR2)
-        vyR1.append(VyR1)
-        vyR2.append(VyR2)
-        cdxa.insert(i,cd[0])
-        cdya.insert(i,cd[1])
+        Try1.insert(z,qR1[z-1][0])#s.try
+        Try2.insert(z,qR1[z-1][1])
+        
+        Try3.insert(z,qR2[z-1][0])
+        Try4.insert(z,qR2[z-1][1])
+        
+        
+        ds1.insert(z,ds_1)
+        ds2.insert(z,ds_2)
+
+        do1.insert(z,do_1)
+        do2.insert(z,do_2)
+        
+        Vx1.insert(z,Vx_1)
+        Vx2.insert(z,Vx_2)
+        Vy1.insert(z,Vy_1)
+        Vy2.insert(z,Vy_2)
         #Seccion de banderas
-        i=i+1
-        if(dR1<0.02)and((VxR1<0.001)and(VyR1<0.001)and(arrival_flag1==0)):
-            arrival_flag1=1
-            tR1saved=tR1
-        if(dR2<0.02)and((VxR2<0.001)and(VyR2<0.001)and(arrival_flag2==0)):
-            arrival_flag2=1
-            tR2saved=tR2
-        if((arrival_flag1)and(arrival_flag2)==1):
-            break
-        tR1=tR1+dt
-        tR2=tR2+dt
-
-        u[14]=tR1
-        u[15]=tR2
-
-        #archivo.write(str(xo1[i-1])+","+str(yo1[i-1])+","+str(v[i-1][0])+","+str(v[i-1][1])+","+str(t)+","+str(dr)+","+str(do)+","+str(d)+","+str(ds)+","+str(xc1)+","+str(yc1)+","+str(p[i-1])+"\n")
-        s=[tR1saved,tR2saved,Try1,vxR1,vyR1,tsR1,drR1a,doR1a,dR1a,0,Try2,Try3,Try4,dsR1a,dR2a,0,doR2a,drR2a,dsR2a,tsR2,dsR1,dsR2,vxR2,vyR2,0,0,0,0,0,0,0,0,cdxa,cdya]
-        pdT=[PdR1,PdR2]
-        vect=[r,pd,pdT]
-    return s, vect
+        z=z+1
+        if(dr_1<0.02)and((Vx_1<0.001)and(Vy_1<0.001)and(aux1==1)):
+            aux1=2
+            tR1saved=t_1
+        if(dr_2<0.02)and((Vx_2<0.001)and(Vy_2<0.001)and(aux2==1)):
+            aux2=2
+            tR2saved=t_2
+        t_1=t_1+dt
+        t_2=t_2+dt
+    return [tR1saved,tR2saved,Try1,Try2,Try3,Try4,Vx1,Vy1,Vx2,Vy2,do1,do2,ds1,ds2,ts1,ts2]
 
 
-def CirclevirtualModel(Ci,phi,dt):
-    vd=0.0
-    x=Ci[0]+(np.sin(phi*dt)*vd)
-    y=Ci[1]-(np.cos(phi*dt)*vd)
-    return [x,y]
 
-def DaisyvirtualModel(Ci,t):
-    m=3
-    st=30
-    o=2*(3.1416)/st
-    bt = 0.6
-    at = 0.5
-    rt = 0.6
-    x= Ci[0] + bt*(at - rt*Cos(m*o*t))*Cos(o*t)
-    y= Ci[1] + bt*(at -rt*Cos(m*o*t))*Sin(o*t)
-    return [np.real(x),np.real(y)]
-def GeronovirtualModel(Ci,t):
-    a=0.50
-    b=0.45
-    st=10
-    o=2*(3.1416)/st
-    x = Ci[0]+a*Sin(o*t)
-    y = Ci[1]+b*Sin(o*t)*Cos(o*t)
-    return[np.real(x),np.real(y)]
+def Omnidireccional(u=None,x=0.0,y=0.0,xd=0.0,yd=0.0,xd_p=0.0,yd_p=0.0,k1=1.0,k2=1.0,saturacion=inf):
+    '''
+    Creamos la función contenedora del movimiento del robot omnidireccional \n
+    k1 - Ganancia 1 \n
+    k2 - Ganancia 2 \n
+    x - Posicion en x del robot n \n
+    y - Posicion en y del robot n \n
+    xd - Posicion deseada en x del robot n \n
+    yd - Posicion deseada en y del robot n \n
+    xd_p - Velocidad deseada en la componente x \n
+    yd_p - Velocidad deseada en la componente y \n
+    u - entrada de control \n
+    saturacion - velocidad maxima en m/s
+    regresa una tupla
+    '''    
+    vx_a=xd_p+k1*(xd-x)
+    vx_r=u*(yd-y)
+    v_x=vx_a+vx_r
+    vy_a=yd_p+k2*(yd-y)
+    vy_r=-u*(xd-x);
+    v_y=vy_a+vy_r;
+    if (v_x>saturacion):
+       v_x=saturacion
+       pass
+    if (v_x<-saturacion):
+       v_x=-saturacion
+       pass
+    if (v_y>saturacion):
+        v_y=saturacion
+        pass
+    if (v_y<-saturacion): 
+        v_y=-saturacion 
+        pass    
+    return [v_x, v_y]
+def distancia_entre_robots(r=0.10,q_a=None,q_b=None):
+    """
+    [float] r - radio del robot  \n
+    [list] q_a - vector posicion del robot A \n
+    [list] q_b - vector posicion del robot B \n
+    regresa una lista
+    """
+    return Plus(q_a,(Times(r,Minus(q_a,q_b))/np.linalg.norm(Minus(q_a,q_b))))
+def repulsor(q_A=None, O_rA=None):
+    """
+    [List] q_A - vector posicion del robot n \n
+    [List] O_rA - vector distancia del robot n contra robot n+1 \n
+    regresa una lista
+    """
+    return np.real(cmath.log(np.abs(cmath.log(cmath.cos(cmath.log(np.linalg.norm(Minus(q_A,O_rA)))))))*cmath.log(np.linalg.norm(Minus(q_A,O_rA))))

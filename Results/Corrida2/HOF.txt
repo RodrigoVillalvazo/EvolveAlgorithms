@@ -1,2 +1,7 @@
-Abs(Real(Sec(Sec(Minus(Real(Real(Abs(Cot(Sqr(qy2))))), Minus(Norm(Sin(Asin(Abs(xdp1)))), Asin(Atanr(Power(Sinh(xd2), Times(xdp2, yd1)))))))))); 336.3125168140001
-Exp(Acos(Vx2)); 324.91975546339893
+Sin(Divide(Atan2r(Abs(Divide(x_2, y_2)), Minimum(Maximum(t_1, OrR2R1y), Sech(y_1))), Divide(Sqr(Coth(Vx_2)), Atanr(Divide(OrR1R1y, OrR1R1y))))); 36.27563534275144
+Sin(Divide(Atan2r(dr_1, Minimum(Maximum(Sech(Abs(Abs(Asin(t_2)))), OrR2R1y), Sech(y_1))), Divide(Sqr(Coth(Vx_2)), Atanr(Divide(OrR1R1y, OrR1R1y))))); 36.13207533816704
+Sin(Divide(Atan2r(dr_1, Minimum(Maximum(Sech(Abs(Abs(y_1))), OrR2R1y), Sech(y_1))), Divide(Sqr(Coth(Vx_2)), Atanr(Divide(OrR1R1y, OrR1R1y))))); 36.12006233811589
+Sin(Divide(Atan2r(dr_1, Minimum(Maximum(Sech(Abs(Abs(y_1))), OrR2R1y), Sech(y_1))), Divide(Sqr(Coth(Vx_2)), Atanr(Divide(OrR1R1y, OrR1R1y))))); 36.12006233811589
+Sin(Divide(Atan2r(dr_1, Minimum(Maximum(Sech(Abs(Abs(y_1))), OrR2R1y), Sech(y_1))), Divide(Sqr(Coth(Vx_2)), Atanr(OrR1R1y)))); 36.10815583803497
+Sin(Divide(Atan2r(dr_1, Minimum(Maximum(Sech(Abs(Abs(y_1))), OrR2R1y), Sech(y_1))), Divide(Sqr(Coth(Vx_2)), Atanr(OrR1R1y)))); 36.10815583803497
+Sin(Divide(Atan2r(dr_1, Minimum(Maximum(Sech(Abs(Abs(y_1))), OrR2R1y), Sech(y_1))), Divide(Coth(Vx_2), Atanr(OrR1R1y)))); 35.99614233660947

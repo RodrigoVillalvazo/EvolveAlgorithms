@@ -1,0 +1,4 @@
+0;Sin(Divide(Atan2r(dr_1, Minimum(Maximum(Sech(Abs(Abs(y_1))), OrR2R1y), Sech(y_1))), Divide(Sqr(Coth(Vx_2)), Atanr(OrR1R1y))));36.10815583803497;
+
+1;Sin(Divide(Atan2r(dr_1, Minimum(Maximum(Sech(Abs(Abs(y_1))), OrR2R1y), Sech(y_1))), Divide(Sqr(Coth(Vx_2)), Atanr(OrR1R1y))));36.10815583803497;
+

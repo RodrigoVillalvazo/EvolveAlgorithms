@@ -1,0 +1,26 @@
+0;Atan2r(Abs(Tanh(Plus(Sech(Acos(Maximum(Logn(xd_2), Sinh(dr_1)))), y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));126.72305887689818;
+
+1;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));88.6437207169892;
+
+2;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));88.6437207169892;
+
+3;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));88.6437207169892;
+
+4;Atan2r(Abs(Plus(Vy_2, y_2)), Sqr(Sqr(Csch(Sech(dr_2)))));94.14464663828335;
+
+5;Atan2r(Abs(Tanh(Tanh(Plus(Vy_2, y_2)))), Sqr(Sqr(Csch(Sech(dr_2)))));88.87069245449824;
+
+6;Atan2r(Abs(Tanh(Plus(Vy_2, Coth(Minimum(Real(td), Sqr(y_1)))))), Sqr(Sqr(Tanh(Plus(Vy_2, y_2)))));126.81880975807822;
+
+7;Atan2r(Abs(Csch(Sech(dr_2))), Sqr(Sqr(Csch(Sech(dr_2)))));134.0988462471843;
+
+8;Atan2r(Abs(Tanh(Plus(Tanh(Plus(Vy_2, y_2)), y_2))), Sqr(Sqr(Csch(Sech(dr_2)))));126.74112017396233;
+
+9;Atan2r(Abs(Vy_2), Sqr(Sqr(Csch(Sech(dr_2)))));151.27123557357496;
+
+10;Atan2r(Abs(Tanh(Csch(Sech(dr_2)))), Sqr(Sqr(Csch(Sech(dr_2)))));126.64312867168572;
+
+11;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), Sqr(Sqr(Plus(Vy_2, y_2))));133.74509156231608;
+
+12;Atan2r(Abs(Tanh(Plus(Vy_2, y_2))), dr_2);133.60338852389557;
+

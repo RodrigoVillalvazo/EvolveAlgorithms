@@ -2,7 +2,10 @@ import csv
 import sys
 import numpy as np
 import math
-from Simulate import Evasion2Robots
+sys.path.insert(0, '~/libs')
+sys.path.insert(1, '~/Simulation')
+from Simulations.Simulate import Simulacion
+from libs.Math import Plus, Times
 class OmnFitness:
     def __init__(self,ind):
         self.ind = ind
@@ -10,7 +13,6 @@ class OmnFitness:
         self.td = td
     def Fitness(self,index):
             ret_fit1=0
-            ret_fit2=0
             ret_fit3=0
             FileD=open('Training.txt')#Direccion contenedora del archivo de condiciones iniciales
             #td=self.td
@@ -30,42 +32,44 @@ class OmnFitness:
             for j in range(0, len(cols)):
                 data[j]=lineData[j]
             Cd=[0.5,0.5]
+            rCen=0.1
+            n=2
+            #Vector direccion
+            theta=np.arange(0,2*np.pi,2*np.pi/n)
+            Vdir1=[np.cos(theta[0]),np.sin(theta[0])]
+            Vdir2=[np.cos(theta[1]),np.sin(theta[1])]
+            #Posicion deseada
+            PdR1=Plus(Cd,Times(rCen,Vdir1))
+            PdR2=Plus(Cd,Times(rCen,Vdir2))   
             #Hacemos un barrido de las condiciones inciales y accedemos a las que necesitemos
             Rob1=[lineData[0][index],lineData[1][index]]#Posicion inicial del robot 1
             Rob2=[lineData[2][index],lineData[3][index]]#Posicion inicial del robot 2
             td=float(lineData[6][index])
             tf=td+0.50
-            rRob1,rRob2=0.02,0.02#Radio del robot 1 y robot2
-            s,Desires=Evasion2Robots(ind,tf,td,FileD,Rob1,Rob2,rRob1,rRob2,Cd)#Simulacion de los robots para cada condicion inicial y cada individuo
-            radios=Desires[0]
-            pd=Desires[1]
-            PdR1=pd[0]
-            PdR2=pd[1]
+            initialConditions=[Rob1,Rob2,PdR1,PdR2]#Vector de Condiciones iniciales
+            radios=[0.02,0.02]#Radio de los robots y obstaculos
+            pd=[initialConditions[2],initialConditions[3]]#Vectir de posiciones deseadas
+            s=Simulacion(ind=ind,pos=initialConditions,pd=pd,r=radios,tf=tf,td=td)#Simulacion de los robots para cada condicion inicial y cada individuo
             #Tiempo que tardo en llegar el robot
             timeSavedR1=s[0]
             timeSavedR2=s[1]
+            Try1a=s[2]#Posicion en el eje X del robot 1
+            Try2a=s[3]#Posicion en el eje Y del robot 1
+            Try3a=s[4]#Posicion en el eje X del robot 2
+            Try4a=s[5]#Posicion en el eje Y del robot 2
+            
+            dsR1=s[12]#Distancia entre cada robot visto desde el robot 1
+            dsR2=s[13]#Distancia entre cada robot visto desde el robot 2
             #Variable temporal almacendada para cada robot
-            timeR1=s[5]#Variable t del robot 1
-            timeR2=s[19]#Variable t del robot 2
-            Try1=s[2]#Posicion en el eje X del robot 1
-            Try2=s[10]#Posicion en el eje Y del robot 1
-            Try3=s[11]#Posicion en el eje X del robot 2
-            Try4=s[12]#Posicion en el eje Y del robot 2
-            dsR1=s[20]#Distancia entre cada robot visto desde el robot 1
-            dsR2=s[21]#Distancia entre cada robot visto desde el robot 2
-            EX1=s[24]
-            EX2=s[25]
-            EX3=s[26]
-            EX4=s[27]
+            timeR1=s[14]#Variable t del robot 1
+            timeR2=s[15]#Variable t del robot 2
                 
             n1=np.size(timeR1)-1#Variable auxiliar
             n2=np.size(timeR2)-1#Variable auxiliar
                         
-            TryR1=[Try1[n1],Try2[n1]]#Vector posicion del robot 1
-            TryR2=[Try3[n2],Try4[n2]]#Vector posicion del robot 2
                         
-            ErrorPosRob1=np.linalg.norm([TryR1[0]-PdR1[0],TryR1[1]-PdR1[1]])#Error de posicion del robot 1
-            ErrorPosRob2=np.linalg.norm([TryR2[0]-PdR2[0],TryR2[1]-PdR2[1]])#Error de posicion del robot 2
+            ErrorPosRob1=np.linalg.norm([Try1a[n1]-PdR1[0],Try2a[n1]-PdR1[1]])#Error de posicion del robot 1
+            ErrorPosRob2=np.linalg.norm([Try3a[n1]-PdR2[0],Try4a[n1]-PdR2[1]])#Error de posicion del robot 2
             ErrorTiempoR1=abs(timeSavedR1-td)#Error del tiempo de llegada del robot 1 y el tiempo limite
             ErrorTiempoR2=abs(timeSavedR2-td)#Error del tiempo de llegada del robot 2 y el tiempo limite
             radio=radios[0]+radios[1]
@@ -73,13 +77,12 @@ class OmnFitness:
             Ext1=(timeSavedR1==0)and(ErrorTiempoR1>tolerance)
             Ext2=(timeSavedR2==0)and(ErrorTiempoR2>tolerance)
             old_fitness=(ErrorPosRob1**2)+(ErrorPosRob2**2)+(ErrorTiempoR1**2)+(ErrorTiempoR2**2)#Fitness error cuadratico medio
+            
             if (math.isnan(old_fitness) or math.isinf(old_fitness)):#Penalizamos si el fitness es infinito o si no es un numero
-                ret_fit1=old_fitness+120.0
-            elif((dsR1<=radio)and(dsR2<=radio)):
-                ret_fit2=old_fitness+100.0
+                ret_fit1=old_fitness+50.0
             elif(Ext1 or Ext2):#Penalizamos la diferencia entre tiempos de llegada de cada robot
-                ret_fit3=old_fitness+110.0
+                ret_fit3=old_fitness+40.0
             else:
                 old_fitness=old_fitness
-            new_fitness=ret_fit1+ret_fit2+ret_fit3+old_fitness#Fitness error cuadratico medio 
+            new_fitness=ret_fit1+ret_fit3+old_fitness#Fitness error cuadratico medio 
             return new_fitness,      

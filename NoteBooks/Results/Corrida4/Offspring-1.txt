@@ -1,0 +1,150 @@
+0;Plus(td, yd_1);107.27981533622702;
+
+1;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(Csch(x_2), yd_2)), Tan(Maximum(Csch(x_2), ds_2))));58.73174763667838;
+
+2;Atan2r(Cos(Real(Norm(OrR2R1y))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));59.98597207058621;
+
+3;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Logn(Logn(y_1))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.697915914503234;
+
+4;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Maximum(td, yd_2)));160.920141158851;
+
+5;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Tan(Maximum(Csch(x_2), ds_2))), Tan(Maximum(Csch(x_2), ds_2))));117.22847470023373;
+
+6;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Times(Vy_1, y_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.585839084884924;
+
+7;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Acos(t_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+8;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(yd_1, ds_2))));114.08488370288535;
+
+9;Plus(Csch(x_2), Sqrt(Coth(x_1)));75.62079363880882;
+
+10;Atan2r(Real(y_1), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));59.844163170773086;
+
+11;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Plus(Sqrt(xd_2), Sinh(x_2))))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Cos(Logn(Logn(y_1))), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.68929790513003;
+
+12;Plus(Csch(x_2), y_2);67.15062649252822;
+
+13;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));59.63328526557103;
+
+14;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1)))), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+15;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Cot(Asin(t_1))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Plus(OrR2R1y, Vx_2), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));57.52672803626781;
+
+16;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Sqr(Coth(Sin(Abs(xd_2)))));157.52147711087758;
+
+17;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Plus(OrR2R1y, Vx_2)), Cot(Tanh(Sech(Vx_1)))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.67196309504563;
+
+18;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(Asin(Real(Plus(OrR2R1x, Vx_1))), OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y))))))))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));57.687938395559286;
+
+19;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y)))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));57.834993368652405;
+
+20;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(y_1), Tan(Maximum(Csch(x_2), ds_2))));59.85298567617688;
+
+21;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(Maximum(td, yd_2)), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));68.75599567067341;
+
+22;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Tan(Maximum(Csch(x_2), ds_2))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.631420736397025;
+
+23;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))));106.88858668392837;
+
+24;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Logn(Logn(y_1)), y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.68945323662848;
+
+25;Atan2r(Cos(Vy_1), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));59.4415478651094;
+
+26;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+27;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));59.63328526557103;
+
+28;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+29;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+30;Plus(Sqr(Atan2r(Sech(Csch(x_2)), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));95.78050835383323;
+
+31;Plus(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x))))))), yd_1);121.95602404394401;
+
+32;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+33;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+34;Plus(Csch(x_2), yd_1);66.93648875956656;
+
+35;Plus(Csch(x_2), yd_1);66.93648875956656;
+
+36;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Csch(x_2)))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));122.58508152543126;
+
+37;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Sech(Acos(Sqr(OrR1R1x))), ds_2))));109.867555959936;
+
+38;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(Tan(Times(Csch(Sqr(y_2)), Cot(Exp(Vx_1))))), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.576252232627645;
+
+39;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+40;Plus(Csch(x_2), Cosh(OrR2R1x));72.68402317705302;
+
+41;Atan2r(Cos(Logn(Cosh(Exp(Sinh(Real(yd_1)))))), Times(Atanr(Maximum(td, yd_2)), yd_1));77.60602357183606;
+
+42;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(OrR2R1x))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Asin(OrR1R1y), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));54.00952831923805;
+
+43;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x))))))), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));95.46249483451638;
+
+44;Norm(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2))))));133.96082233084448;
+
+45;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Logn(Cot(y_2))))))));121.75198513885007;
+
+46;Plus(Csch(x_2), Real(Norm(Asin(Real(Atanr(Sec(td)))))));74.04919223923665;
+
+47;Atan2r(Cos(Sqr(Coth(xd_2))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));60.31200335711393;
+
+48;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+49;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Cosh(Maximum(Sec(dr_1), Divide(t_1, OrR1R1x))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+50;Tanh(Cot(y_2));114.39719045114234;
+
+51;Sec(Exp(Cos(Exp(OrR2R1x))));115.14424505563042;
+
+52;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+53;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+54;Plus(Csch(x_2), yd_1);66.93648875956656;
+
+55;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));59.63328526557103;
+
+56;Plus(Csch(x_2), yd_1);66.93648875956656;
+
+57;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));59.63328526557103;
+
+58;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Coth(t_1))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Tanh(x_1))))))))));301.94000831173804;
+
+59;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Norm(Times(Vy_1, y_1))))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+60;Plus(Csch(x_2), y_2);67.15062649252822;
+
+61;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+62;Tanh(Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));145.38920989838374;
+
+63;Atan2r(Cos(Logn(Logn(y_1))), t_2);110.39560036126707;
+
+64;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Cot(OrR2R1y), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+65;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(Acos(Asin(Sech(ds_2))))))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Atan2r(t_2, dr_2)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));56.689297905130026;
+
+66;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Csch(x_2))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));58.32377336834136;
+
+67;Plus(Acos(t_1), yd_1);110.85186391213965;
+
+68;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))))));120.53280281873481;
+
+69;Atan2r(Cos(Logn(Logn(y_1))), Maximum(Csch(x_2), ds_2));108.03706157796469;
+
+70;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Sec(Abs(Cos(Maximum(Times(Times(Times(Real(y_1), Plus(OrR2R1y, Vx_2)), Sinh(Times(x_2, xd_1))), Minimum(Sech(Tanh(xd_1)), Atan2r(Plus(td, t_1), Cot(OrR2R1y)))), Times(Maximum(Sqrt(Norm(OrR2R1x)), Real(Norm(OrR2R1y))), Sech(Acos(Sqr(OrR1R1x)))))))), ds_2))));57.15574432675403;
+
+71;Plus(Sqr(Atan2r(Sech(Minimum(Exp(Asin(Cot(Sqrt(Norm(Times(Vy_1, y_1)))))), Tanh(Times(Maximum(Real(Exp(Sqrt(xd_1))), Asin(Plus(Atan2r(t_2, dr_2), Coth(t_1)))), Sinh(Asin(Exp(Divide(xd_1, OrR2R1x)))))))), Tanh(Sin(Minimum(Sin(Cos(Atanr(Times(Exp(y_1), Acos(t_1))))), Sinh(Plus(Csc(Asin(Coth(Atanr(Sech(ds_2))))), Sech(Logn(Csch(Acos(Cosh(OrR2R1y)))))))))))), Abs(Minus(Csch(x_2), Cos(Tan(Atanr(Exp(Sqr(Sinh(Asin(Maximum(xd_1, y_2)))))))))));67.94607068466505;
+
+72;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), x_2));119.91054900271081;
+
+73;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(Tan(Maximum(Csch(Sech(x_2)), ds_2))), ds_2))));110.22855486897656;
+
+74;Atan2r(Cos(Logn(Logn(y_1))), Times(Atanr(Maximum(td, yd_2)), Tan(Maximum(Csch(x_2), ds_2))));59.63328526557103;
+

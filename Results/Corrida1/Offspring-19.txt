@@ -1,0 +1,30 @@
+0;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Sqr(Csch(Sech(dr_2))))))), Sqr(Sqr(Csch(Plus(Vy_2, Sqr(Sqr(Csch(Acos(Minus(xd_2, Vx_2))))))))));193.96473303106714;
+
+1;Atan2r(Abs(Tanh(Sech(dr_2))), Sqr(Sqr(Csch(Sech(dr_2)))));126.7279884246791;
+
+2;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Sqr(Csch(Vy_2)))))), Sqr(Sqr(Csch(Sech(dr_2)))));134.21393235142392;
+
+3;Atan2r(Abs(Tanh(Plus(Sech(dr_2), Sqr(Sqr(Csch(Sech(dr_2))))))), Sqr(Sqr(Csch(Sech(dr_2)))));134.14398426992403;
+
+4;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Sqr(Csch(Sech(dr_2))))))), Minus(Atan2r(Asin(x_2), Sin(y_2)), Atan2r(Cosh(y_2), Minimum(y_1, yd_1))));70.43258182544417;
+
+5;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Sqr(Csch(Sech(dr_2))))))), Sqr(Sqr(Csch(Sech(dr_2)))));88.38746726929293;
+
+6;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Sqr(Csch(Sech(dr_2))))))), Sqr(Sqr(Csch(Sech(dr_2)))));88.38746726929293;
+
+7;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Sqr(Csch(Sech(dr_2))))))), Sqr(Sqr(Csch(Sech(dr_2)))));88.38746726929293;
+
+8;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Cot(Norm(Sqrt(ds_2))))))), Sqr(Sqr(Csch(Sech(dr_2)))));134.22522249078352;
+
+9;Atan2r(Abs(Tanh(Plus(Csch(Sech(dr_2)), Sqr(Sqr(Csch(Sech(dr_2))))))), Sqr(Sqr(Csch(Sech(dr_2)))));134.1249291652091;
+
+10;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Vy_2)))), Sqr(Sqr(Csch(Sech(dr_2)))));151.23837848269338;
+
+11;Atan2r(Abs(Tanh(Plus(Sqr(Csch(Sech(dr_2))), Sqr(Sqr(Csch(Sech(dr_2))))))), Sqr(Sqr(Csch(Sech(dr_2)))));134.09429475545122;
+
+12;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Sqr(Csch(Sech(dr_2))))))), Sqr(Sqr(Csch(Sech(Tanh(Plus(Vy_2, Sqr(Sqr(Csch(Sech(dr_2)))))))))));119.5763768623685;
+
+13;Atan2r(Abs(dr_2), Csc(Csch(Acos(Coth(Vy_1)))));362.524;
+
+14;Atan2r(Abs(Tanh(Plus(Vy_2, Sqr(Sqr(Csch(Sech(dr_2))))))), Sqr(Sqr(dr_2)));126.99616849458089;
+
