@@ -1,7 +1,7 @@
 # EvolveAlgorithms
-This is a repository for Analythic Behavior Control Using Python.
-First should be installed "setuptools" and "pip(only for linux)"
-if not, run this from cmd:
+This is a repository for Analythic Behavior Control Using Python. \n
+First should be installed "setuptools" and "pip(only for linux)" \n
+if not, run this from cmd: \n
   linux: apt-get install python3-setuptools 
          apt-get install python3-pip
   windows: pip install setuptools
