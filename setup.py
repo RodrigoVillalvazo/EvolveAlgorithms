@@ -56,14 +56,15 @@ def load_requirements(fname):
     return [str(ir.requirement) for ir in reqs]
 
 def run_setup():
-    setup(name="EvolveAlgorithms", 
+    setup(
+      name="EvolveAlgorithms", 
       version='1.0',
       description='Evolve algorithms for robotics',
       author='Rodrigo Villalvazo',
       author_email='rodri.villalvazo3@gmail.com',
       platforms=['any'],
       packages=find_packages(exclude=['examples']),
-      #cmdclass={"build_ext": ve_build_ext},
+      cmdclass={"build_ext": ve_build_ext},
       install_requires=load_requirements("requeriments.txt"))
     
 

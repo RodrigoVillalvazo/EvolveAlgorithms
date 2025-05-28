@@ -49,9 +49,9 @@ def Main(N,path):
     #Tiempo de llegada
     td=4.0
     #numero de generaciones
-    Ngen=5#increase Factor
+    Ngen=10#increase Factor
     #numero de poblacion
-    Npop=5#Decrease factor
+    Npop=10#Decrease factor
     #numero de condiciones iniciales disponibles
     Ncon=2
     #condicionador, el factor debe ser menor al numero de condiciones
