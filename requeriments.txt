@@ -5,3 +5,4 @@ numpy>=1.10
 deap>=1.0
 lxml>=4.0
 scipy>=1.0
+sympy>=0.5
